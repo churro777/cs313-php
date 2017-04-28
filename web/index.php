@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
         <!-- global stylesheet -->
         <link rel="stylesheet" href="main.css" />
     </head>
@@ -22,25 +22,7 @@
           </div>
         </div>
         <!-- navbar -->
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignments<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Week 01</a></li>
-                                <li><a href="#">Week 02</a></li>
-                                <li><a href="#">Week 03</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">About Me</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
+        <?php include 'navbar.php' ?>
         <!-- content - links to projects and old assignment -->
 
 
