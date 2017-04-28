@@ -24,8 +24,17 @@
         <!-- navbar -->
         <?php include 'navbar.php' ?>
         <!-- content - links to projects and old assignment -->
-        <div class="row content">
-            <div class="col-all-12">
+        <div class="row">
+            <div class="content col-xs-12">
+                <div class="row">
+                  <h1 col-xs-12>About the Class</h1>
+                </div>
+                <div class="row">
+                  <p class="col-xs-10-12 col-xs-offset-1">
+                    CS 313 - Web Engineering II is all about learning full stack web development.
+                  </p>
+                </div>
+                </div>
                 <div class="row">
                   <p class="col-xs-10-12 col-xs-offset-1">
                     Welcome to Arturo Aguila's website for CS 313! There are many exciting thing additions that will be coming this semester.
