@@ -14,7 +14,7 @@
         <!-- global stylesheet -->
         <link rel="stylesheet" href="main.css" />
     </head>
-    <body>
+    <body class="container">
         <!-- header -->
         <?php include 'header.php' ?>
         <!-- navbar -->
