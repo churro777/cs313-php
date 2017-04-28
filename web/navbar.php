@@ -17,13 +17,13 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
+<!--
 <?php
     if(is_file("index.php")){
-        echo "<h1>is file = true</h1>"
+        echo "is file = true"
     }
 
     if(is_dir("index.php")){
-        echo "<h1>is dir = true</h1>"
+        echo "is dir = true"
     }
- ?>
+ ?> -->
