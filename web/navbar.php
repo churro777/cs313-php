@@ -21,7 +21,6 @@
 <?php
 
 // current directory
-echo getcwd();
 
 echo dirname(__FILE__);
 
