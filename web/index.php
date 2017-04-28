@@ -1,3 +1,4 @@
+<?php $home = 'active'; ?>
 <!DOCTYPE html>
 <html>
     <head>

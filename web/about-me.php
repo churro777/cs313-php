@@ -1,3 +1,4 @@
+<?php $aboutMe = 'active'; ?>
 <!DOCTYPE html>
 <html>
     <head>
