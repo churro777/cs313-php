@@ -30,12 +30,20 @@
             <div class="content col-xs-12">
                 <div class="row">
                     <h1 class="col-xs-12">
-                        Welcome to Arturo Aguila's website for CS 313! There are many exciting thing additions that will be
-                        coming this semester.
+                        Welcome to Arturo Aguila's website for CS 313!
                     </h1>
                 </div>
                 <div class="row">
-                    <h2 col-xs-12>About the Class</h2>
+                    <p class="col-xs-12">
+                        There are many exciting thing additions that will be
+                        coming this semester.
+                    </p>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <h2 class="col-xs-12">About the Class</h2>
                 </div>
                 <div class="row">
                     <p class="col-xs-12">
