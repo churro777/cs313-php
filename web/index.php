@@ -14,14 +14,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- global stylesheet -->
         <link rel="stylesheet" href="main.css" />
-
     </head>
 
     <body class="container">
         <!-- header -->
         <div class="row">
           <div class="col-xs-12-12">
-              <img />
+              <img src="images/header.jpg"/>
           </div>
         </div>
         <!-- navbar -->
