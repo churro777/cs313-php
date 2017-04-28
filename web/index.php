@@ -29,20 +29,21 @@
         <section class="row">
             <div class="content col-xs-12">
                 <div class="row">
-                    <h1 col-xs-12>About the Class</h1>
+                    <h1 class="col-xs-12">
+                        Welcome to Arturo Aguila's website for CS 313! There are many exciting thing additions that will be
+                        coming this semester.
+                    </h1>
                 </div>
                 <div class="row">
-                    <p class="col-xs-10-12 col-xs-offset-1">
+                    <h2 col-xs-12>About the Class</h2>
+                </div>
+                <div class="row">
+                    <p class="col-xs-12">
                         CS 313 - Web Engineering II is all about learning full stack web development. Brother Burton teaches our
                         class. We are currently using Heroku to host our webpages.
                     </p>
                 </div>
-                <div class="row">
-                    <p class="col-xs-10-12 col-xs-offset-1">
-                        Welcome to Arturo Aguila's website for CS 313! There are many exciting thing additions that will be
-                        coming this semester.
-                    </p>
-                </div>
+
             </div>
         </section>
         <!-- End content -->
