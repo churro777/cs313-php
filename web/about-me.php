@@ -33,6 +33,11 @@
                         his friends and is currently Dungeon Master for a Dungeons & Dragons game for his friends.
                     </p>
                 </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="images/dndGroup.jpg" alt="Arturo's friend's playing DnD">
+                    </div>
+                </div>
             </div>
         </section>
 
