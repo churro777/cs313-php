@@ -34,7 +34,7 @@
                     </p>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-6 imgContainer">
                         <img src="images/dndGroup.jpg" alt="Arturo's friend's playing DnD">
                     </div>
                 </div>
