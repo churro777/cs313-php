@@ -24,7 +24,11 @@
         <!-- navbar -->
         <?php include 'navbar.php' ?>
         <!-- content - links to projects and old assignment -->
-
+        <div class="row">
+          <p class="col-xs-10-12 col-xs-offset-1">
+            Welcome to Arturo Aguila's website for CS 313! There are many exciting thing additions that will be coming this semester.
+          </p>
+        </div>
 
 
 
