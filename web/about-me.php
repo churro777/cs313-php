@@ -24,12 +24,12 @@
         <section class="row">
             <div class="content col-xs-12">
                 <div class="row">
-                    <h1 class="col-xs-12">About Me</h1>
+                    <h2 class="col-xs-12">About Me</h2>
                 </div>
                 <div class="row">
                     <p class="col-xs-12">
                         Arturo Aguila is a student in CS 313 and the creator of this web site. Arturo likes to play frisbee with
-                        his friends and is currently Dungeon Master (DM) for a Dungeons & Dragons (DnD) game for his friends.
+                        his friends and is currently Dungeon Master for a Dungeons & Dragons game for his friends.
                     </p>
                 </div>
             </div>
