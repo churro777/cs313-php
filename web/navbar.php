@@ -12,7 +12,7 @@
                         <li><a href="#">Week 03</a></li>
                     </ul>
                 </li>
-                <li><a href="#">About Me</a></li>
+                <li><a href="about-me.php">About Me</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
