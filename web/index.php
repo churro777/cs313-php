@@ -16,38 +16,35 @@
 
     <body class="container">
         <!-- header -->
-        <div class="row">
+        <header class="row">
           <div class="col-xs-12-12">
               <img src="images/header.png"/>
           </div>
-        </div>
+        </header>
+
         <!-- navbar -->
         <?php include 'navbar.php' ?>
-        <!-- content - links to projects and old assignment -->
-        <div class="row">
+
+        <!-- content - some paragraphs about the class and stuff-->
+        <section class="row">
             <div class="content col-xs-12">
                 <div class="row">
-                  <h1 col-xs-12>About the Class</h1>
+                    <h1 col-xs-12>About the Class</h1>
                 </div>
                 <div class="row">
-                  <p class="col-xs-10-12 col-xs-offset-1">
-                    CS 313 - Web Engineering II is all about learning full stack web development.
-                  </p>
-                </div>
+                    <p class="col-xs-10-12 col-xs-offset-1">
+                        CS 313 - Web Engineering II is all about learning full stack web development. Brother Burton teaches our
+                        class. We are currently using Heroku to host our webpages.
+                    </p>
                 </div>
                 <div class="row">
-                  <p class="col-xs-10-12 col-xs-offset-1">
-                    Welcome to Arturo Aguila's website for CS 313! There are many exciting thing additions that will be coming this semester.
-                  </p>
+                    <p class="col-xs-10-12 col-xs-offset-1">
+                        Welcome to Arturo Aguila's website for CS 313! There are many exciting thing additions that will be
+                        coming this semester.
+                    </p>
                 </div>
             </div>
-        </div>
-
-
-
-
-
-
-
+        </section>
+        <!-- End content -->
     </body>
 </html>
