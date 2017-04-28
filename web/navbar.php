@@ -17,3 +17,10 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<?php
+
+// current directory
+echo getcwd();
+
+?>
