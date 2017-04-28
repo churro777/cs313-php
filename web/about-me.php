@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Welcome to Art's CS 313 Homepage!</title>
+        <title>About Arturo Aguila</title>
+
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -13,38 +14,26 @@
         <!-- global stylesheet -->
         <link rel="stylesheet" href="main.css" />
     </head>
-
-    <body class="container">
+    <body>
         <!-- header -->
         <?php include 'header.php' ?>
         <!-- navbar -->
         <?php include 'navbar.php' ?>
 
-        <!-- content - some paragraphs about the class and stuff-->
+        <!-- About Me Content -->
         <section class="row">
             <div class="content col-xs-12">
                 <div class="row">
-                    <h1 class="col-xs-12">Welcome to Arturo Aguila's website for CS 313!</h1>
+                    <h1 class="col-xs-12">About Me</h1>
                 </div>
                 <div class="row">
                     <p class="col-xs-12">
-                        There are many exciting thing additions that will be
-                        coming this semester.
+                        Arturo Aguila is a student in CS 313 and the creator of this web site. Arturo likes to play frisbee with
+                        his friends and is currently Dungeon Master (DM) for a Dungeons & Dragons (DnD) game for his friends.
                     </p>
                 </div>
-
-                <div class="row">
-                    <h2 class="col-xs-12">About the Class</h2>
-                </div>
-                <div class="row">
-                    <p class="col-xs-12">
-                        CS 313 - Web Engineering II is all about learning full stack web development. Brother Burton teaches our
-                        class. We are currently using Heroku to host our webpages.
-                    </p>
-                </div>
-
             </div>
         </section>
-        <!-- End content -->
+
     </body>
 </html>
