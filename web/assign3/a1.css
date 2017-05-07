@@ -1,0 +1,159 @@
+body {
+    background-color: #0b2a3d;
+    font-family: fantasy;
+}
+
+img {
+    width: 100%;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+/*Generic Classes*/
+
+.no-pad {
+    padding: 0;
+}
+
+.space-1 {
+    margin-top: 1em;
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+#cartContainer {
+    padding-top: 15px;
+}
+
+#cartAmount {
+    color: white;
+    position: absolute;
+    left: 125px;
+    margin-top: 21px;
+    font-size: 24px;
+    font-family: fantasy;
+}
+
+#sidenavContainer {
+    height: calc(100vh - 200px);
+}
+
+#sidenav, #bottomLinks, #shop, #cart, #checkout, #confirmation, .info {
+    background-color: #bdc7db;
+    font-family: fantasy;
+    padding: 1em;
+    border: ridge 5px #96757b;
+    border-radius: 5px;
+}
+
+.sideLink, .footerLink {
+    font-family: fantasy;
+    font-size: 20px;
+    color: black;
+    padding-top: 6px;
+}
+
+.sideLink:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #717783;
+}
+
+.itemTitle {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 8px;
+}
+
+.item {
+    width: 100%;
+    background-color: #8f6f73;
+    border: ridge 3px #96757b;
+    border-radius: 5px;
+}
+
+.itemImgContainer img {
+    border-radius: 10px;
+    border: ridge;
+}
+
+.addToCart {
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: black;
+    background-color: white;
+    padding-top: 5px;
+    border-radius: 14px;
+}
+
+.addToCart:hover {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}
+
+#bottomLinks li {
+    display: inline;
+    margin-right: 3em;
+}
+
+.footerLink:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 30px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.cartInfo {
+    font-size: 25px;
+}
+
+.qty {
+    text-align: center;
+}
+
+.formLabel {
+    font-size: 25px;
+}
+
+.cartTotal {
+    font-size: 30px;
+}
+
+.receiptText {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.receiptInfo {
+    font-size: 23px;
+}
+
+.receiptTitle {
+    font-weight: bold;
+    text-decoration: underline;
+}
