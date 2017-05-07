@@ -39,6 +39,10 @@ p {
     text-decoration: underline;
 }
 
+.whiteBackground {
+    background-color: white;
+}
+
 #cartContainer {
     padding-top: 15px;
 }
@@ -75,6 +79,10 @@ p {
     color: white;
     text-decoration: none;
     background-color: #717783;
+}
+
+#shop .row {
+    margin-top: 1em;
 }
 
 .itemTitle {

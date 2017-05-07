@@ -22,10 +22,68 @@
     }
 
     // array of the real names of the dice
-    $productNames = array("blueDice" => "Blue Dice", "copperDice" => "Copper Dice");
+    $productNames = array("blueDice" => "Blue Dice",
+    "copperDice" => "Copper Dice",
+    "setOfFive" => "Five Sets",
+    "greenGold" => "Green & Gold",
+    "limeDice" => "Lime Dice",
+    "purpleDice" => "Purple Dice",
+    "redDice" => "Red Dice",
+    "redDwarven" => "Red Dwarven",
+    "yellowTransluscent" => "Yello Dice",
+
+    "cherryTower" => "Cherry Tower",
+    "hickoryTower" => "Hickory Tower",
+    "wengeTower" => "Wenge Tower",
+    "castleTower" => "Castle Tower",
+    "stacksTower" => "Stacks Tower",
+    "tamarindTower" => "Tamarin Tower",
+
+    "drowRanger" => "Drow Ranger",
+    "owlbear" => "Owlbear",
+    "humanThug" => "Human Thug",
+    "fireDwarf" => "Fire Dwarf",
+    "koboldFigher" => "Kobold Figher",
+    "humanWizard" => "Human Wizard",
+    "fireGiant" => "Fire Giant",
+    "humanFighter" => "Human Fighter");
+
+
+    //price types
+    $dicePrice = 2;
+    $metalDice = 5;
+    $woodTower = 12;
+    $specialityTower = 20;
+    $standardMini = 8;
+    $rareMini = 15;
 
     // array of how much each item costs
-    $productPrices = array("blueDice" => "3", "copperDice" => "6");
+    $productPrices = array("blueDice" => $dicePrice,
+    "copperDice" => $metalDice,
+    "setOfFive" => "10",
+    "greenGold" => $dicePrice,
+    "limeDice" => $dicePrice,
+    "purpleDice" => $dicePrice,
+    "redDice" => $dicePrice,
+    "redDwarven" => $metalDice,
+    "yellowTransluscent" => $dicePrice,
+
+    "cherryTower" => $woodTower,
+    "hickoryTower" => $woodTower,
+    "wengeTower" => $woodTower,
+    "castleTower" => $specialityTower,
+    "stacksTower" => $specialityTower,
+    "tamarindTower" => $woodTower,
+
+    "drowRanger" => $standardMini,
+    "owlbear" => $standardMini,
+    "humanThug" => $standardMini,
+    "fireDwarf" => $rareMini,
+    "koboldFigher" => $standardMini,
+    "humanWizard" => $standardMini,
+    "fireGiant" => $rareMini,
+    "humanFighter" => $standardMini,
+);
 
     // array total cost per item
     $_SESSION["productPriceTotals"] = array();
