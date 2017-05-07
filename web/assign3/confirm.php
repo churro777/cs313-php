@@ -1,5 +1,32 @@
 <?php session_start();
     $_SESSION["insideCart"] = true;
+
+    // array of the real names of the dice
+    $productNames = array("blueDice" => "Blue Dice",
+    "copperDice" => "Copper Dice",
+    "setOfFive" => "Five Sets",
+    "greenGold" => "Green & Gold",
+    "limeDice" => "Lime Dice",
+    "purpleDice" => "Purple Dice",
+    "redDice" => "Red Dice",
+    "redDwarven" => "Red Dwarven",
+    "yellowTransluscent" => "Yello Dice",
+
+    "cherryTower" => "Cherry Tower",
+    "hickoryTower" => "Hickory Tower",
+    "wengeTower" => "Wenge Tower",
+    "castleTower" => "Castle Tower",
+    "stacksTower" => "Stacks Tower",
+    "tamarindTower" => "Tamarin Tower",
+
+    "drowRanger" => "Drow Ranger",
+    "owlbear" => "Owlbear",
+    "humanThug" => "Human Thug",
+    "fireDwarf" => "Fire Dwarf",
+    "koboldFigher" => "Kobold Figher",
+    "humanWizard" => "Human Wizard",
+    "fireGiant" => "Fire Giant",
+    "humanFighter" => "Human Fighter");
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,18 +84,25 @@
                     </div>
 
                     <?php foreach ($_SESSION["items"] as $itemKey => $qty): ?>
-                        <div class="row">
-                            <div class="col-xs-4 col-xs-offset-1 receiptInfo"><?php echo "$itemKey"; ?></div>
-                            <div class="col-xs-2 col-xs-offset-1 receiptInfo"><?php echo "$qty"; ?></div>
-                            <div class="col-xs-3 receiptInfo"><?php echo "$" .$_SESSION["productPriceTotals"]["$itemKey"]; ?></div>
-                        </div>
+                        <?php if ($_SESSION["productPriceTotals"]["$itemKey"] > 0): ?>
+                            <div class="row">
+                                <div class="col-xs-4 col-xs-offset-1 receiptInfo">
+                                    <?php   foreach ($productNames as $x => $x_value) {
+                                                if ($x == $itemKey) { echo "$x_value"; }
+                                            }
+                                    ?>
+                                </div>
+                                <div class="col-xs-2 col-xs-offset-1 receiptInfo"><?php echo "$qty"; ?></div>
+                                <div class="col-xs-3 receiptInfo"><?php echo "$" .$_SESSION["productPriceTotals"]["$itemKey"]; ?></div>
+                            </div>
+                        <?php endif; ?>
                     <?php endforeach; ?>
 
 
                 </section>
             </div>
 
-            <a class="col-xs-2" href="shop.php"><img src="img/returnToShop.png" alt=""></a>
+            <a class="col-xs-2" href="destroy.php"><img src="img/returnToShop.png" alt=""></a>
 
         </div>
 
