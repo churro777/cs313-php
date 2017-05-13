@@ -8,13 +8,11 @@
     // false = show the cart section in the header
     $_SESSION["insideCart"] = false;
 
-
     // Add item to cart was clicked - update all the session variables and go back to shop
     if (isset($_GET["item"])) {
         // get the itemID
-
-        // increase quantity of certain item
         $item = $_GET["item"];
+        // increase quantity of certain item
         $_SESSION["items"][$item] = $_SESSION["items"][$item] + 1;
 
         // increase amount of items in cart
@@ -23,8 +21,6 @@
         // Send user back to the shop - mainly so URL is the same
         header("Location: shop.php");
     }
-
-
 ?>
 <!DOCTYPE html>
 <html>
