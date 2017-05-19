@@ -24,7 +24,10 @@ $result = pg_query($conn, "select * from race");
         <?php
             while ($row = pg_fetch_array($result)) {
                 //do stuff with $row
-                echo "<b>$row[1] $row[2]:$row[3]</b> - $row[4] <br /><br />";
+                echo "<b>$row[1]</b> <br />
+                        $row[2] <br />
+                        $row[3] <br />
+                        $row[4] <br /><br />";
            }
         ?>
     </body>
