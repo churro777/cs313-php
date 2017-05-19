@@ -21,5 +21,11 @@ $result = pg_query($conn, "select * from race");
     </head>
     <body>
         <h1>Testing Data Retrieval</h1>
+        <?php
+            while ($row = pg_fetch_array($result)) {
+                //do stuff with $row
+                echo "<b>$row[1] $row[2]:$row[3]</b> - $row[4] <br /><br />";
+           }
+        ?>
     </body>
 </html>
