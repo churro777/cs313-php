@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$result = pg_query($conn, "select * from scriptures");
+$result = pg_query($conn, "select * from race");
 ?>
 <!DOCTYPE html>
 <html>
