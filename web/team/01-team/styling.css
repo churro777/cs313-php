@@ -1,0 +1,18 @@
+.getBold:hover {
+    font-weight: bold;
+}
+
+#biggest {
+    font-size: 60px;
+    color: red;
+}
+
+#big {
+    font-size: 30px;
+    color: blue;
+}
+
+#medium {
+    font-size: 20px;
+    color: purple;
+}
