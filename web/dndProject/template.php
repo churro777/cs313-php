@@ -19,32 +19,81 @@
 
     </head>
     <body class="container-fluid">
-        <div class="row">
+        <div id="rowOfHolding" class="row">
             <!-- leftside bar -->
             <section id="sidebar" class="col-xs-2">
                 <!-- logo -->
-                <div class="row">
-                    <div class="col-xs-12">
+                <div  class="row space-1">
+                    <div class="col-xs-6 col-xs-offset-3">
                         <img src="img/logo.png" alt="">
                     </div>
                 </div>
                 <!-- login -->
-                <div class="row">
-                    <div class="col-xs-12">
-
-                    </div>
+                <div class="row space-2">
+                    <div id="login" class="col-xs-12">Login</div>
                 </div>
+                <br>
                 <!-- characters -->
-                <div class="row">
-                    <div class="col-xs-12">
-
-                    </div>
+                <div class="row characterRow">
+                    <a class="col-xs-12">Geroth Kadik</a>
+                </div>
+                <hr>
+                <div class="row characterRow">
+                    <a class="col-xs-12">Contin Strult</a>
+                </div>
+                <hr>
+                <div class="row characterRow">
+                    <a class="col-xs-12">Astor Fasim</a>
                 </div>
             </section>
             <!-- content -->
             <section id="content" class="col-xs-10">
                 <!-- name and race and class -->
+                <div class="row">
+                    <div id="characterName" class="col-xs-8">Jonny Smithersonson</div>
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <div class="col-xs-12 center">Level 5</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 center">Half-Orc Barbarian</div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
                 <!-- abiilty scores and modifiers -->
+                <div id="" class="row">
+                    <div class="col-xs-2 center">
+                        <div class="abilityScoreBox">
+                            STR <br /> 19 (+4)
+                        </div>
+                    </div>
+                    <div class="col-xs-2 center">
+                        <div class="abilityScoreBox">
+                            DEX <br /> 19 (+4)
+                        </div>
+                    </div>
+                    <div class="col-xs-2 center">
+                        <div class="abilityScoreBox">
+                            CON <br /> 19 (+4)
+                        </div>
+                    </div>
+                    <div class="col-xs-2 center">
+                        <div class="abilityScoreBox">
+                            INT <br /> 19 (+4)
+                        </div>
+                    </div>
+                    <div class="col-xs-2 center">
+                        <div class="abilityScoreBox">
+                            WIS <br /> 19 (+4)
+                        </div>
+                    </div>
+                    <div class="col-xs-2 center">
+                        <div class="abilityScoreBox">
+                            CHA <br /> 19 (+4)
+                        </div>
+                    </div>
+                </div>
                 <!-- left section -->
                     <!-- hp -->
                     <!-- hit dice - total and how many left -->
