@@ -12,13 +12,16 @@
             integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/dndMain.css">
 
     </head>
-    <body class="container">
+    <body class="container-fluid">
         <div class="row">
             <!-- leftside bar -->
-            <section class="col-xs-2">
+            <section id="sidebar" class="col-xs-2">
                 <!-- logo -->
                 <div class="row">
                     <div class="col-xs-12">
@@ -39,7 +42,7 @@
                 </div>
             </section>
             <!-- content -->
-            <section class="col-xs-10">
+            <section id="content" class="col-xs-10">
                 <!-- name and race and class -->
                 <!-- abiilty scores and modifiers -->
                 <!-- left section -->
