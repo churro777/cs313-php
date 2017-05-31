@@ -14,6 +14,11 @@ $password = htmlspecialchars($_POST['password']);
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 echo $passwordHash;
 
+echo $_POST['password'];
+echo $_POST['firstName'];
+echo $_POST['lasttName'];
+echo $_POST['userName'];
+
 $statement = $db->prepare('INSERT INTO player(firstName, lastName, username, password) VALUES (:fn, :ln, :un, :ps);');
 $statement->bindParam(':fn', $_POST["firstName"], PDO::PARAM_STR);
 $statement->bindParam(':ln', $_POST["lasttName"], PDO::PARAM_STR);
