@@ -14,8 +14,4 @@ try {
     echo "Error connecting to the db. Details: $ex";
     die();
 }
-
-
-
-
 ?>

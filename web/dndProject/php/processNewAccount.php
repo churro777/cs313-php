@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-if ($_SESSION["newUser"] == "true"){
-    echo "<h2>inserting a new user</h2>";
+// make sure a new user is trying to create an account otherwise send them back to the login page
+if ($_SESSION["newUser"] != "true"){
+    header("Location: ../index.php");
 }
 require 'connectToDb.php';
 
@@ -19,5 +20,8 @@ $statement->bindParam(':ps', $passwordHash, PDO::PARAM_STR);
 $statement->execute();
 
 header("Location: ../index.php");
+
+$_SESSION["newUser"] = "false";
+
 exit;
 ?>

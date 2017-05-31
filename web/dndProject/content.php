@@ -1,4 +1,12 @@
-<?php  ?>
+<?php session_start();
+// make sure the login is good. this shouldn't ever happen but just in case
+if($_SESSION["badLogin"] == "true"){
+    header("Location: ../index.php");
+}
+
+require 'php/connectToDb.php';
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,6 +24,7 @@
             crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="css/dndMain.css">
+        <link rel="stylesheet" href="css/basic.css">
 
     </head>
     <body class="container-fluid">

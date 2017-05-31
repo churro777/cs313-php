@@ -22,9 +22,5 @@ if (isset($username) && isset($password)){
     } else {
         $_SESSION["badLogin"] = "true";
     }
-
-
 }
-
-
 ?>
