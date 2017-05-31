@@ -28,11 +28,6 @@
                         <img src="img/logo.png" alt="">
                     </div>
                 </div>
-                <!-- login -->
-                <div class="row space-2">
-                    <div id="login" class="col-xs-12">Login</div>
-                </div>
-                <br>
                 <!-- characters -->
                 <div class="row characterRow">
                     <a class="col-xs-12">Geroth Kadik</a>

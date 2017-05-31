@@ -7,11 +7,11 @@ if ($_SESSION["newUser"] == "true"){
 
 require 'connectToDb.php';
 
-?>
+$statement = $db->prepare('INSERT INTO player(firstName, lastName, username, password) VALUES (:fn, :ln, :un, :ps)');
+$statement->bindParam(':fn', $_POST["firstName"], PDO:PARAM_STR);
+$statement->bindParam(':ln', $_POST["lasttName"], PDO:PARAM_STR);
+$statement->bindParam(':un', $_POST["userName"], PDO:PARAM_STR);
 
-<?php foreach ($db->query('select * from race') as $row): ?>
-    <label>
-        <input type="checkbox" name="topics" value="<?php echo $row[1] ?>"> <?php echo $row[1] ?>
-    </label>
-    <br>
-<?php endforeach; ?>
+
+
+?>
