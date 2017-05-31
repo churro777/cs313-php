@@ -7,6 +7,8 @@ $dbName = 'test';
 $dbHost = 'localhost';
 $dbPort = '5432';
 
+
+
 try {
     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $user, $pass);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -26,4 +28,14 @@ function createUser(){
     echo $_POST["firstName"];
 };
 
+
+
+
 ?>
+
+<?php foreach ($db->query('select * from topic') as $row): ?>
+    <label>
+        <input type="checkbox" name="topics" value="<?php echo $row[1] ?>"> <?php echo $row[1] ?>
+    </label>
+    <br>
+<?php endforeach; ?>
