@@ -13,7 +13,7 @@ echo $_GET['username'];
 
 require 'connectToDb.php';
 echo "<p>1</p>";
-require 'password.php';
+//require 'password.php';
 echo "<p>2</p>";
 $password = htmlspecialchars($_GET['password']);
 echo "<p>3</p>";
