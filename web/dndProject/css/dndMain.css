@@ -1,7 +1,7 @@
 body, #sidebar, #content, #rowOfHolding {
     height: 100%;
     min-height: 100%;
-    font-family: Roboto,Helvetica,sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
 }
 
 img {
@@ -14,8 +14,6 @@ hr {
     border: 0;
     border-top: 1px solid black;
 }
-
-
 
 #sidebar {
     background-color: rgb(244, 67, 54);
@@ -32,7 +30,6 @@ hr {
     font-family: fantasy;
     padding: .25em;
 }
-
 
 #abilityScoreRow {
     border: 2px black solid;
@@ -56,9 +53,8 @@ hr {
     text-align: center;
 }
 
-
 .white {
-    color:white;
+    color: white;
 }
 
 #loginBox {
@@ -67,10 +63,15 @@ hr {
     box-shadow: 10px 10px 5px grey;
 }
 
-#loginSubmit {
-
-}
+#loginSubmit {}
 
 #createAccount {
-    color:white;
+    color: white;
+}
+
+#newCharacterLink {
+    color: white;
+    background-color: maroon;
+    font-size: 20px;
+    padding: .25em 0em;
 }

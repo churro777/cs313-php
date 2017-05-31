@@ -4,7 +4,7 @@ if($_SESSION["badLogin"] == "true"){
     header("Location: ../index.php");
 }
 
-require 'php/connectToDb.php';
+// require 'php/connectToDb.php';
 
 ?>
 <!DOCTYPE html>
@@ -37,7 +37,17 @@ require 'php/connectToDb.php';
                         <img src="img/logo.png" alt="">
                     </div>
                 </div>
+                <div class="row newCharacterRow">
+                    <a href="phhpContent/characterCreation.php" id="newCharacterLink"
+                        class="center col-xs-12 space-2">New Character</a>
+                </div>
+                <hr>
+
+
+
                 <!-- characters -->
+                <!-- will be replaced by php require 'getCharacters.php' -->
+                <?php //require 'getCharacters.php' ?>
                 <div class="row characterRow">
                     <a class="col-xs-12">Geroth Kadik</a>
                 </div>
@@ -49,6 +59,9 @@ require 'php/connectToDb.php';
                 <div class="row characterRow">
                     <a class="col-xs-12">Astor Fasim</a>
                 </div>
+
+
+
             </section>
             <!-- content -->
             <section id="content" class="col-xs-10">
