@@ -15,33 +15,7 @@ hr {
     border-top: 1px solid black;
 }
 
-.space-1 {
-    margin-top: .5em;
-}
 
-.space-2 {
-    margin-top: 1em;
-}
-
-.space-3 {
-    margin-top: 1.5em;
-}
-
-.space-4 {
-    margin-top: 2em;
-}
-
-.space-5 {
-    margin-top: 2.5em;
-}
-
-.space-6 {
-    margin-top: 3em;
-}
-
-.center {
-    text-align: center;
-}
 
 #sidebar {
     background-color: rgb(244, 67, 54);
@@ -80,4 +54,23 @@ hr {
 #login {
     font-size: 20px;
     text-align: center;
+}
+
+
+.white {
+    color:white;
+}
+
+#loginBox {
+    background-color: red;
+    border-radius: 1em;
+    box-shadow: 10px 10px 5px grey;
+}
+
+#loginSubmit {
+
+}
+
+#createAccount {
+    color:white;
 }
