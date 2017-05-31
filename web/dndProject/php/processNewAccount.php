@@ -21,6 +21,6 @@ $statement->bindParam(':ps', $passwordHash, PDO::PARAM_STR);
 
 $statement->execute();
 
-header("Location: index.php");
+header("Location: ../index.php");
 exit;
 ?>
