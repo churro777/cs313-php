@@ -35,7 +35,7 @@ $_SESSION["newUser"] = "true";
         </div>
         <div class="row">
             <div id="loginBox" class="col-xs-4 col-xs-offset-4 space-4">
-                <form id="loginForm" action="php/processNewAccount.php" method="get">
+                <form id="loginForm" action="php/processNewAccount.php" method="post">
                     <div class="row">
                         <h3 class="col-xs-12 white">Complete the form to create your account</h3>
                     </div>
