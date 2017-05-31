@@ -4,9 +4,6 @@ session_start();
 if ($_SESSION["newUser"] == "true"){
     echo "<h2>inserting a new user</h2>";
 }
-
-
-
 require 'connectToDb.php';
 
 $password = htmlspecialchars($_POST['password']);

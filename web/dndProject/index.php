@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,14 +35,14 @@
         </div>
         <div class="row">
             <div id="loginBox" class="col-xs-4 col-xs-offset-4 space-4">
-                <form id="loginForm" action="processUser.php" method="post">
+                <form id="loginForm" action="authenticateUser.php" method="post">
                     <div class="form-group">
                         <label for="username"></label>
-                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                     </div>
                     <div class="form-group">
                         <label for="password"></label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                         <div class="row">
