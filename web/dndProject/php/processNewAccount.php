@@ -5,6 +5,12 @@ if ($_SESSION["newUser"] == "true"){
     echo "we did it";
 }
 
+echo $_GET['password'];
+echo $_GET['firstName'];
+echo $_GET['lasttName'];
+echo $_GET['userName'];
+
+
 require 'connectToDb.php';
 
 require 'password.php';
