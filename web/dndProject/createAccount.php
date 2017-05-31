@@ -45,7 +45,7 @@ $_SESSION["newUser"] = "true";
                     </div>
                     <div class="form-group">
                         <label for="password"></label>
-                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                        <input type="text" class="form-control" id="lastname" name="lastName" placeholder="Last Name">
                     </div>
                     <div class="form-group">
                         <label for="username"></label>
