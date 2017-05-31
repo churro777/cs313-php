@@ -17,8 +17,8 @@ $statement = $db->prepare('INSERT INTO player(firstName, lastName, username, pas
 $statement->bindParam(':fn', $_POST["firstName"], PDO:PARAM_STR);
 $statement->bindParam(':ln', $_POST["lasttName"], PDO:PARAM_STR);
 $statement->bindParam(':un', $_POST["userName"], PDO:PARAM_STR);
-// $statement->bindParam(':un', $passwordHash, PDO:PARAM_STR);
+$statement->bindParam(':ps', $passwordHash, PDO:PARAM_STR);
 
-// $statement->execute();
+$statement->execute();
 
 ?>
