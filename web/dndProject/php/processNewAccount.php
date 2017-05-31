@@ -19,6 +19,6 @@ $statement->bindParam(':ln', $_POST["lasttName"], PDO:PARAM_STR);
 $statement->bindParam(':un', $_POST["userName"], PDO:PARAM_STR);
 $statement->bindParam(':un', $passwordHash, PDO:PARAM_STR);
 
-$statement->execute();
+// $statement->execute();
 
 ?>
