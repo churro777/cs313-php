@@ -5,7 +5,7 @@ echo "<p>conntected to DB</p>";
 echo $_POST["characterName"] . "<br />";
 echo $_POST["raceChoice"] . "<br />";
 echo $_POST["classChoice"] . "<br />";
-echo $_SESSION["usernam"] . "<br />";
+echo $_SESSION["username"] . "<br />";
 
 $statement = $db->prepare('INSERT INTO character (player_id, charactername, race_id, class_id, level, experience)
                             VALUES ((SELECT id FROM player WHERE username = :un)
