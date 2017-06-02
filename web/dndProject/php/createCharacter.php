@@ -15,7 +15,7 @@ $statement = $db->prepare('INSERT INTO character (player_id, charactername, race
                                     1, 1);');
 echo "prepared <br />";
 
-$statement->bindParam(':un', $_POST["username"], PDO::PARAM_STR);
+$statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
 $statement->bindParam(':cn', $_POST["characterName"], PDO::PARAM_STR);
 $statement->bindParam(':r', $_POST["raceChoice"], PDO::PARAM_STR);
 $statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
