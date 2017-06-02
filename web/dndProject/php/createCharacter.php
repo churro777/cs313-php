@@ -11,11 +11,14 @@ $statement = $db->prepare('INSERT INTO character (player_id, charactername, race
                                     :cn,
                                     (SELECT id FROM race WHERE racename = :r),
                                     (SELECT id FROM race WHERE racename = :c),
-                                    0, 0);');
+                                    1, 1);');
+echo "prepared <br />";
+
 $statement->bindParam(':un', $_POST["username"], PDO::PARAM_STR);
 $statement->bindParam(':cn', $_POST["characterName"], PDO::PARAM_STR);
 $statement->bindParam(':r', $_POST["raceChoice"], PDO::PARAM_STR);
 $statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
+echo "parameters binded <br />";
 
 $statement->execute() or die(print_r($db->errorInfo(), true));
 
