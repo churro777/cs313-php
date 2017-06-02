@@ -11,7 +11,7 @@ $statement = $db->prepare('INSERT INTO character (player_id, charactername, race
                             VALUES ((SELECT id FROM player WHERE username = :un),
                                     :cn,
                                     (SELECT id FROM race WHERE racename = :r),
-                                    (SELECT id FROM race WHERE racename = :c),
+                                    (SELECT id FROM class WHERE classname = :c),
                                     1, 1);');
 echo "prepared <br />";
 
@@ -20,6 +20,9 @@ $statement->bindParam(':cn', $_POST["characterName"], PDO::PARAM_STR);
 $statement->bindParam(':r', $_POST["raceChoice"], PDO::PARAM_STR);
 $statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
 echo "parameters binded <br />";
+
+
+$statement->debugDumpParams();
 
 try {
     $statement->execute();
