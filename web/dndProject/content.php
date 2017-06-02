@@ -45,7 +45,7 @@
 
                 <!-- characters -->
                 <!-- will be replaced by php require 'getCharacters.php' -->
-                <?php require 'php/getCharacters.php' ?>
+                <?php require 'phpContent/getCharacters.php' ?>
                 <!-- <div class="row characterRow">
                     <a class="col-xs-12">Geroth Kadik</a>
                 </div>
