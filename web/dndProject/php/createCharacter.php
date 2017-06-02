@@ -20,11 +20,12 @@ $statement->bindParam(':r', $_POST["raceChoice"], PDO::PARAM_STR);
 $statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
 echo "parameters binded <br />";
 
-$statement->execute() or die(print_r($db->errorInfo(), true));
+try {
+    $statement->execute();
+} catch (PDOException $ex) {
+    echo "Error connecting to the db. Details: $ex";
+}
 
-echo "executed <br />";
+echo "executed successfully <br />";
 
 header("Location: ../content.php");
-
-
-?>
