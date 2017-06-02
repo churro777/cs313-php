@@ -1,8 +1,4 @@
 <?php session_start();
-// make sure the login is good. this shouldn't ever happen but just in case
-if($_SESSION["badLogin"] == "true"){
-    header("Location: index.php");
-}
 
 // require 'php/connectToDb.php';
 

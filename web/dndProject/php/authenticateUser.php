@@ -16,10 +16,10 @@ if (isset($username) && isset($password)){
     $passwordHash = $statement->fetch();
 
     if(password_verify($password, $passwordHash[0]) ) {
-        $_SESSION["badLogin"] = "false";
         $_SESSION["username"] = $_POST["username"];
         header("Location: ../content.php");
     } else {
+        header("Location: ../index.php");
         $_SESSION["badLogin"] = "true";
     }
 }
