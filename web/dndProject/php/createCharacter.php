@@ -13,6 +13,7 @@ $statement = $db->prepare('INSERT INTO character (player_id, charactername, race
                                     (SELECT id FROM race WHERE racename = :c),
                                     1, 1);');
 echo "prepared <br />";
+echo $statement . "<br />";
 
 $statement->bindParam(':un', $_POST["username"], PDO::PARAM_STR);
 $statement->bindParam(':cn', $_POST["characterName"], PDO::PARAM_STR);
@@ -23,7 +24,7 @@ echo "parameters binded <br />";
 try {
     $statement->execute();
 } catch (PDOException $ex) {
-    echo "Error connecting to the db. Details: $ex";
+    echo "Problem inserting character. Details: $ex";
 }
 
 echo "executed successfully <br />";
