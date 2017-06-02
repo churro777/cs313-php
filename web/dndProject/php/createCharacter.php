@@ -1,5 +1,5 @@
 <?php session_start();
-// require connectToDb();
+require 'connectToDb.php';
 // echo "<p>conntected to DB</p>";
 
 // echo $_POST["characterName"] . "<br />";
