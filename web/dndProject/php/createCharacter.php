@@ -17,7 +17,7 @@ $statement->bindParam(':cn', $_POST["characterName"], PDO::PARAM_STR);
 $statement->bindParam(':r', $_POST["raceChoice"], PDO::PARAM_STR);
 $statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
 
-$statement->execute();
+$statement->execute() or die(print_r($db->errorInfo(), true));
 
 header("Location: ../content.php");
 
