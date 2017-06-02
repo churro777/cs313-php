@@ -1,8 +1,8 @@
 <?php session_start();
 // get character names based off of the player
-$statement = $db->prepare('SELECT charactername
-    FROM character
-    WHERE player_id = (SELECT id FROM player WHERE username = :un);');
+$statement = $db->prepare('SELECT charactername FROM character
+                            WHERE player_id = (SELECT id FROM player WHERE username = :un);');
+
 $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
 
 $statement->execute();

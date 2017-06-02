@@ -25,6 +25,7 @@
 
     </head>
     <body class="container-fluid">
+        <!-- The Row of Holding holds everything on the page -->
         <div id="rowOfHolding" class="row">
             <!-- leftside bar -->
             <section id="sidebar" class="col-xs-2">
@@ -44,8 +45,8 @@
 
                 <!-- characters -->
                 <!-- will be replaced by php require 'getCharacters.php' -->
-                <?php //require 'getCharacters.php' ?>
-                <div class="row characterRow">
+                <?php require 'getCharacters.php' ?>
+                <!-- <div class="row characterRow">
                     <a class="col-xs-12">Geroth Kadik</a>
                 </div>
                 <hr>
@@ -55,7 +56,7 @@
                 <hr>
                 <div class="row characterRow">
                     <a class="col-xs-12">Astor Fasim</a>
-                </div>
+                </div> -->
 
 
 
