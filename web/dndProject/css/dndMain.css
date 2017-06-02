@@ -75,3 +75,7 @@ hr {
     font-size: 20px;
     padding: .25em 0em;
 }
+
+.creatorLabel {
+    color: white;
+}

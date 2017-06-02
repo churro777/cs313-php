@@ -11,6 +11,7 @@ if($_SESSION["badLogin"] == "true"){
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="icon" href="img/logoIcon.ico" type="image/gif" sizes="16x16">
         <title>DnD Character Creator Template</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -38,7 +39,7 @@ if($_SESSION["badLogin"] == "true"){
                     </div>
                 </div>
                 <div class="row newCharacterRow">
-                    <a href="phhpContent/characterCreation.php" id="newCharacterLink"
+                    <a href="characterCreater.php" id="newCharacterLink"
                         class="center col-xs-12 space-2">New Character</a>
                 </div>
                 <hr>
