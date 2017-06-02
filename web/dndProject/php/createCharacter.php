@@ -1,6 +1,6 @@
 <?php session_start();
 require 'connectToDb.php';
-// echo "<p>conntected to DB</p>";
+echo "<p>conntected to DB</p>";
 
 // echo $_POST["characterName"] . "<br />";
 // echo $_POST["raceChoice"] . "<br />";
