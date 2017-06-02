@@ -8,7 +8,7 @@ echo $_POST["classChoice"] . "<br />";
 echo $_SESSION["username"] . "<br />";
 
 $statement = $db->prepare('INSERT INTO character (player_id, charactername, race_id, class_id, level, experience)
-                            VALUES ((SELECT id FROM player WHERE username = :un)
+                            VALUES ((SELECT id FROM player WHERE username = :un),
                                     :cn,
                                     (SELECT id FROM race WHERE racename = :r),
                                     (SELECT id FROM race WHERE racename = :c),
