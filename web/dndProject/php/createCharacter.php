@@ -5,6 +5,7 @@ echo "<p>conntected to DB</p>";
 echo $_POST["characterName"] . "<br />";
 echo $_POST["raceChoice"] . "<br />";
 echo $_POST["classChoice"] . "<br />";
+echo $_SESSION["usernam"] . "<br />";
 
 $statement = $db->prepare('INSERT INTO character (player_id, charactername, race_id, class_id, level, experience)
                             VALUES ((SELECT id FROM player WHERE username = :un)
@@ -13,7 +14,6 @@ $statement = $db->prepare('INSERT INTO character (player_id, charactername, race
                                     (SELECT id FROM race WHERE racename = :c),
                                     1, 1);');
 echo "prepared <br />";
-echo $statement . "<br />";
 
 $statement->bindParam(':un', $_POST["username"], PDO::PARAM_STR);
 $statement->bindParam(':cn', $_POST["characterName"], PDO::PARAM_STR);
