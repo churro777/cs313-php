@@ -19,6 +19,8 @@ $statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
 
 $statement->execute() or die(print_r($db->errorInfo(), true));
 
+echo "executed <br />";
+
 header("Location: ../content.php");
 
 
