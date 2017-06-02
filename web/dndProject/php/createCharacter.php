@@ -19,10 +19,12 @@ $statement->bindParam(':un', $_POST["username"], PDO::PARAM_STR);
 $statement->bindParam(':cn', $_POST["characterName"], PDO::PARAM_STR);
 $statement->bindParam(':r', $_POST["raceChoice"], PDO::PARAM_STR);
 $statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
-echo "parameters binded <br />";
+echo "parameters binded <br /> <br />";
 
 
 $statement->debugDumpParams();
+
+echo "<br /><br />";
 
 try {
     $statement->execute();
