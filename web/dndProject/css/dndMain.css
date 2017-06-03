@@ -57,7 +57,7 @@ hr {
     text-align: center;
 }
 
-.white {
+.white, .white:hover {
     color: white;
 }
 

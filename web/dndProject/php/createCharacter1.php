@@ -19,6 +19,10 @@ try {
     echo "Problem inserting character. Details: $ex";
 }
 
-header("Location: ../content.php");
+
+
+
+
+header("Location: ../creator_2_scores.php");
 
 ?>

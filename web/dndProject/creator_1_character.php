@@ -37,9 +37,9 @@
         <div class="row">
 
             <div id="loginBox" class="col-xs-8 col-xs-offset-2 space-4">
-                <form id="loginForm" action="php/createCharacter.php" method="post">
-                    <div class="form-group col-xs-12">
-                        <label for="characterName"></label>
+                <form id="loginForm" action="php/createCharacter1.php" method="post">
+                    <div class="form-group col-xs-12 space-2">
+                        <label for="characterName" class="creatorLabel">Character Name</label>
                         <input type="text" class="form-control" id="" name="characterName" placeholder="Character Name">
                     </div>
                     <div class="form-group col-xs-6">
@@ -72,10 +72,9 @@
                             <option>Wizard</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <div class="row">
-                            <button type="submit" class="btn btn-default col-xs-4 col-xs-offset-4 space-3">Create</button>
+                            <button type="submit" class="btn btn-default col-xs-4 col-xs-offset-4 space-3">Next</button>
                         </div>
                     </div>
                 </form>

@@ -40,7 +40,7 @@ require 'php/connectToDb.php';
                     </div>
                 </div>
                 <div class="row newCharacterRow">
-                    <a href="characterCreater.php" id="newCharacterLink"
+                    <a href="creator_1_character.php" id="newCharacterLink"
                         class="center col-xs-12 space-2">New Character</a>
                 </div>
                 <hr>
