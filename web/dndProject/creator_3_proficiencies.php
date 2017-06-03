@@ -48,7 +48,7 @@
                     <?php
                         echo "before prepare <br />";
 
-                        if(!($statement = $db->prepare("SELECT skill FROM classSkillProf WHERE class_id = (SELECT id FROM :c WHERE classname = :cn);"))) {
+                        if(!($statement = $db->prepare("SELECT skill FROM classSkillProf .,.,. WHERE class_id = (SELECT id FROM :c WHERE classname = :cn);"))) {
                             echo "Prepare failed: (" . $db->errno . ") " . $db->error;
                         } else {
                             echo "worked???";
