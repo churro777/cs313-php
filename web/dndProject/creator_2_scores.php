@@ -78,23 +78,23 @@
                     </div>
 
                     <?php
-                        $statement = $db->prepare('SELECT abilityScore, increase FROM raceabilityscoreincrease
-                                                    WHERE race_id = (SELECT id FROM race WHERE racename = :rn);');
-                        $statement->bindParam(':rn', $_SESSION["race"], PDO::PARAM_STR);
-
-                        try {
-                            $statement->execute();
-                        } catch (PDOException $ex) {
-                            echo "Problem getting characters. Details: $ex";
-                        }
-
-                        $scoreResult = $statement->fetchAll();
+                        // $statement = $db->prepare('SELECT abilityScore, increase FROM raceabilityscoreincrease
+                        //                             WHERE race_id = (SELECT id FROM race WHERE racename = :rn);');
+                        // $statement->bindParam(':rn', $_SESSION["race"], PDO::PARAM_STR);
+                        //
+                        // try {
+                        //     $statement->execute();
+                        // } catch (PDOException $ex) {
+                        //     echo "Problem getting characters. Details: $ex";
+                        // }
+                        //
+                        // $scoreResult = $statement->fetchAll();
                     ?>
                     <div class="row">
                         <div class="col-xs-12">Because of your race, <?php echo $_SESSION["race"];?>, you can
                             increase the following scores after generating them.</div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-xs-12">
                             <ul>
                                 <?php foreach ($scoreResult as $scoreRow): ?>
@@ -102,7 +102,7 @@
                                 <?php endforeach; ?>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div class="row">
