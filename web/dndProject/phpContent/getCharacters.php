@@ -18,14 +18,14 @@ try {
 echo "success!!";
 
 
-$characterNames = $statement->fetchAll();
+$namesResult = $statement->fetchAll();
 
 echo "fetchAll() worked";
 ?>
 
-<?php foreach ($characterNames as $name): ?>
+<?php foreach ($namesResult as $nameArray): ?>
     <div class="row characterRow">
-        <a class="col-xs-12"><?php echo $name; ?></a>
+        <a class="col-xs-12"><?php echo $nameArray[0]; ?></a>
     </div>
     <hr>
 <?php endforeach; ?>
