@@ -47,27 +47,15 @@
                         </label>
                     </div>
 
-                    <?php
-                        echo "before prepare <br />";
-
-                        if(!($statement = $db->prepare('SELECT skill FROM classSkillProf
-                                                    WHERE class_id = (SELECT id FROM class WHERE classname = :cn);'))) {
-                            echo "Prepare failed: (" . $db->errno . ") " . $db->error;
-                        } else {
-                            echo "worked???";
-                        }
-
-
-                        echo "prepared <br />";
+                    <?php $statement = $db->prepare('SELECT skill FROM classSkillProf
+                                                    WHERE class_id = (SELECT id FROM class WHERE classname = :cn);');
                         $statement->bindParam(':cn', $_SESSION["class"], PDO::PARAM_STR);
-                        echo "prepared <br />";
+
                         try {
-                            echo "about to execute <br />";
                             $statement->execute();
                         } catch (PDOException $ex) {
                             echo "Problem getting characters. Details: $ex";
                         }
-                        echo "success!!";
                         $scoreResult = $statement->fetchAll();
                     ?>
                     <div class="row white" style="padding:0 15px;">
@@ -95,64 +83,12 @@
                         <label class="creatorLabel">Proficiencies</label>
                         <div class="row">
                             <div class="col-xs-4">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Acrobatics" name="Acrobatics">Acrobatics (Dex)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Animal Handling" name="Animal Handling">Animal Handling (Wis)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Arcana" name="Arcana">Arcana (Int)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Athletics" name="Athletics">Athletics (Str)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Deception" name="Deception">Deception (Cha)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="History" name="History">History (Int)</label>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Insight" name="Insight">Insight (Wis)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Intimidation" name="Intimidation">Intimidation (Cha)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Investigation" name="Investigation">Investigation (Int)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Medicine" name="Medicine">Medicine (Wis)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Nature" name="Nature">Nature (Int)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Perception" name="Perception">Perception (Wis)</label>
-                                </div>
-                            </div>
-                            <div class="col-xs-4">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Performance" name="Performance">Performance (Cha)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Persuasion" name="Persuasion">Persuasion (Cha)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Religion" name="Religion">Religion (Int)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Sleight of Hand" name="SleightHand">Sleight of Hand (Dex)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Stealth" name="Stealth">Stealth (Dex)</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="Survival" name="Survival">Survival (Wis)</label>
-                                </div>
+                                <?php foreach ($scoreResult as $scoreRow): ?>
+                                    <li><?php echo $scoreRow[0];?></li>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="<?php echo $scoreRow[0];?>" name="<?php echo $scoreRow[0];?>"><?php echo $scoreRow[0];?></label>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
