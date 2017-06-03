@@ -25,7 +25,7 @@ echo "fetchAll() worked";
 
 <?php foreach ($namesResult as $nameArray): ?>
     <div class="row characterRow">
-        <a class="col-xs-12"><?php echo $nameArray[0]; ?></a>
+        <a href="#" class="col-xs-12"><?php echo $nameArray[0]; ?></a>
     </div>
     <hr>
 <?php endforeach; ?>
