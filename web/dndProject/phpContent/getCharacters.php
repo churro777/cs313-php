@@ -17,7 +17,7 @@ try {
 echo "success!!";
 
 
-$characterNames = $statment->fetchAll();
+$characterNames = $statement->fetchAll();
 
 echo "fetchAll() worked";
 ?>
