@@ -11,10 +11,11 @@ echo "CHA - " . $_POST["cha"] . "<br />";
 
 // prepare the insert statement
 $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
-                            VALUES ((SELECT id FROM character WHERE charactername = :cn), "STR", :str);');
+                            VALUES ((SELECT id FROM character WHERE charactername = :cn), :score, :str);');
 echo "prepared <br />";
 // bind the variales to the corresponding item from the form on the previous page
 $statement->bindParam(':cn', $_SESSION["character"], PDO::PARAM_STR);
+$statement->bindParam(':score', "STR", PDO::PARAM_STR);
 $statement->bindParam(':str', $_POST["str"], PDO::PARAM_STR);
 echo "binded <br />";
 
