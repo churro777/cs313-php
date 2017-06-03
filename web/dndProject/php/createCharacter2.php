@@ -58,7 +58,7 @@ echo "prepared <br />";
 // bind the variales to the corresponding item from the form on the previous page
 $statement->bindParam(':cn', $_SESSION["character"], PDO::PARAM_STR);
 $statement->bindParam(':scoreType', $DEX, PDO::PARAM_STR);
-$statement->bindParam(':str', $_POST["DEX"], PDO::PARAM_INT);
+$statement->bindParam(':str', $_POST["dex"], PDO::PARAM_INT);
 echo "binded <br />";
 
 // try execute and echo the exception if there is one
@@ -143,7 +143,7 @@ try {
     echo "Problem inserting ability score $WIS. Details: $ex";
 }
 /***************/
-/*     STR     */
+/*     CHA     */
 /***************/
 // prepare the insert statement
 try {
