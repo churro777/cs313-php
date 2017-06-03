@@ -17,6 +17,8 @@ try {
 
 
 $characterNames = $statment->fetchAll();
+
+echo "fetchAll() worked";
 ?>
 
 <?php foreach ($characterNames as $name): ?>
