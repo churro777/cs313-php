@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row">
-            <p class="col-xs-12 center">Fill out the form to create your character.</p>
+            <p class="col-xs-12 center">First lets decide on your race and class.</p>
         </div>
 
         <div class="row">

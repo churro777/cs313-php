@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row">
-            <p class="col-xs-12 center">Fill out the form to create your character.</p>
+            <p class="col-xs-12 center">Next let's figure our your character's Ability Scores.</p>
         </div>
 
         <div class="row">
@@ -39,38 +39,7 @@
             <div id="loginBox" class="col-xs-8 col-xs-offset-2 space-4">
                 <form id="loginForm" action="php/createCharacter.php" method="post">
                     <div class="form-group col-xs-12 space-2">
-                        <label for="characterName" class="creatorLabel">Character Name</label>
-                        <input type="text" class="form-control" id="" name="characterName" placeholder="Character Name">
-                    </div>
-                    <div class="form-group col-xs-6">
-                        <label for="raceChoice" class="creatorLabel">Select list:</label>
-                        <select class="form-control" id="raceChoice" name="raceChoice">
-                            <option>Dragonborn</option>
-                            <option>Dwarf</option>
-                            <option>Elf</option>
-                            <option>Gnome</option>
-                            <option>Half-Elf</option>
-                            <option>Halfling</option>
-                            <option>Half-Orc</option>
-                            <option>Human</option>
-                            <option>Tiefling</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-xs-6">
-                        <label for="classChoice" class="creatorLabel">Select list:</label>
-                        <select class="form-control" id="classChoice" name="classChoice">
-                            <option>Barbarian</option>
-                            <option>Bard</option>
-                            <option>Cleric</option>
-                            <option>Druid</option>
-                            <option>Fighter</option>
-                            <option>Paladin</option>
-                            <option>Ranger</option>
-                            <option>Rogue</option>
-                            <option>Sorcerer</option>
-                            <option>Warlock</option>
-                            <option>Wizard</option>
-                        </select>
+                        <label for="characterName" class="creatorLabel"></label>
                     </div>
 
                     <div class="form-group col-xs-12">
@@ -108,7 +77,7 @@
                     </div>
 
                     <div class="form-group">
-                        
+
                     </div>
 
                     <div class="form-group">
