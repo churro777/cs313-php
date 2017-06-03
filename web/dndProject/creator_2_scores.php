@@ -1,5 +1,5 @@
 <?php session_start();
-    require 'php/connectToDb';
+    require 'php/connectToDb.php';
 ?>
 <!DOCTYPE html>
 <html>
