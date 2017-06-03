@@ -4,6 +4,8 @@ require 'connectToDb.php';
 
 // save the new characters name to the session, will use this to generate the info on content
 $_SESSION["character"] = $_POST["characterName"];
+$_SESSION["race"] = $_POST["raceChoice"];
+$_SESSION["class"] = $_POST["classChoice"];
 
 // prepare the insert statement
 $statement = $db->prepare('INSERT INTO character (player_id, charactername, race_id, class_id, level, experience)

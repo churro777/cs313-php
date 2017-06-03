@@ -145,10 +145,7 @@ try {
 
 
 
-
-
-
 // send the user to the next creator page
-//header("Location: ../creator_2_scores.php");
+header("Location: ../creator_3_proficiencies.php");
 
 ?>

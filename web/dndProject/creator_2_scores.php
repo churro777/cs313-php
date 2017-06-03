@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+    require 'php/connectToDb';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -72,6 +74,40 @@
                                 <label for="str" class="creatorLabel">CHA</label>
                                 <input type="number" class="form-control" id="cha" name="cha" value="10" min="1" max="20">
                             </div>
+                        </div>
+                    </div>
+
+                    <?php
+                        $statement = $db->prepare('SELECT abilityScore, increase FROM raceabilityscoreincrease
+                                                    WHERE race_id = (SELECT id FROM race WHERE racename = :rn);');
+                        $statement->bindParam(':rn', $_SESSION["race"], PDO::PARAM_STR);
+
+                        try {
+                            $statement->execute();
+                        } catch (PDOException $ex) {
+                            echo "Problem getting characters. Details: $ex";
+                        }
+
+                        $scoreResult = $statement->fetchAll();
+                    ?>
+                    <div class="row">
+                        <div class="col-xs-12">Because of your race, <?php echo $_SESSION["race"];?>, you can
+                            increase the following scores after generating them.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul>
+                                <?php foreach ($scoreResult as $scoreRow): ?>
+                                    <li>Increase <?php echo $scoreRow[0];?> by <?php echo $scoreRow[1];?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xs-12">
+
                         </div>
                     </div>
                     <div class="form-group">

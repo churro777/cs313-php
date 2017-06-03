@@ -1,5 +1,4 @@
 <?php
-echo "inside connectToDb.php <br />";
 $dbHost = 'ec2-23-23-227-188.compute-1.amazonaws.com';
 $dbName = 'dc3iv3q4t39i0c';
 $dbPort = '5432';
