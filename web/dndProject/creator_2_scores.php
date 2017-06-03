@@ -90,11 +90,11 @@
 
                         $scoreResult = $statement->fetchAll();
                     ?>
-                    <div class="row">
+                    <div class="row white" style="padding:0 30px;">
                         <div class="col-xs-12">Because of your race, <?php echo $_SESSION["race"];?>, you can
                             increase the following scores after generating them.</div>
                     </div>
-                    <div class="row">
+                    <div class="row white" style="padding:0 30px;">
                         <div class="col-xs-12">
                             <ul>
                                 <?php foreach ($scoreResult as $scoreRow): ?>
