@@ -24,8 +24,13 @@ echo "function worked";
 function insertScore($characterName, $scoreType, $score){
     echo "inside insertScore()";
     // prepare the insert statement
-    $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
-                                VALUES ((SELECT id FROM character WHERE charactername = :cn), :scoreType, :str);');
+    try {
+        $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
+                                    VALUES ((SELECT id FROM character WHERE charactername = :cn), :scoreType, :str);');
+    } catch (PDOException $ex) {
+        echo "<br />Problem preparing statement. Details: $ex";
+    }
+
     echo "prepared <br />";
     // bind the variales to the corresponding item from the form on the previous page
     $statement->bindParam(':cn', $characterName, PDO::PARAM_STR);
