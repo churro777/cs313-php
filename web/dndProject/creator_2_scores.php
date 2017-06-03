@@ -94,15 +94,15 @@
                         <div class="col-xs-12">Because of your race, <?php echo $_SESSION["race"];?>, you can
                             increase the following scores after generating them.</div>
                     </div>
-                    <!-- <div class="row">
+                    <div class="row">
                         <div class="col-xs-12">
                             <ul>
-                                <?php //foreach ($scoreResult as $scoreRow): ?>
-                                    <li>Increase <?php //echo $scoreRow[0];?> by <?php //echo $scoreRow[1];?></li>
-                                <?php //endforeach; ?>
+                                <?php foreach ($scoreResult as $scoreRow): ?>
+                                    <li>Increase <?php echo $scoreRow[0];?> by <?php echo $scoreRow[1];?></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
-                    </div> -->
+                    </div>
 
 
                     <div class="row">
