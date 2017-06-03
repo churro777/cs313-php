@@ -49,6 +49,7 @@
                         echo "before prepare <br />";
                         $statement = $db->prepare('SELECT skill FROM classSkillProf
                                                     WHERE class_id = (SELECT id FROM class WHERE classname = :cn);');
+                        echo "prepared <br />";
                         $statement->bindParam(':cn', $_SESSION["class"], PDO::PARAM_STR);
                         echo "prepared <br />";
                         try {
