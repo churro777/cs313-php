@@ -53,7 +53,7 @@ require 'php/connectToDb.php';
                 <div class="row">
                     <div id="characterName" class="col-xs-8">Jonny Smithersonson</div>
                     <div class="col-xs-4">
-                        <div class="row">
+                        <div id="levelClassRaceContainer" class="row">
                             <div class="col-xs-6 center">Level 5</div>
                             <div class="col-xs-6 center">Half-Orc Barbarian</div>
                         </div>

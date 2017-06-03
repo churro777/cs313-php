@@ -30,6 +30,10 @@ hr {
     font-family: fantasy;
     padding: .25em;
 }
+#levelClassRaceContainer {
+    font-size: 20px;
+    padding: 20px;
+}
 
 #abilityScoreRow {
     border: 2px black solid;
