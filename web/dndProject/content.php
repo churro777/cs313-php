@@ -44,26 +44,8 @@ require 'php/connectToDb.php';
                         class="center col-xs-12 space-2">New Character</a>
                 </div>
                 <hr>
-
-
-
-                <!-- characters -->
-                <!-- will be replaced by php require 'getCharacters.php' -->
+                <!-- generate the characters the user has -->
                 <?php require 'phpContent/getCharacters.php' ?>
-                <!-- <div class="row characterRow">
-                    <a class="col-xs-12">Geroth Kadik</a>
-                </div>
-                <hr>
-                <div class="row characterRow">
-                    <a class="col-xs-12">Contin Strult</a>
-                </div>
-                <hr>
-                <div class="row characterRow">
-                    <a class="col-xs-12">Astor Fasim</a>
-                </div> -->
-
-
-
             </section>
             <!-- content -->
             <section id="content" class="col-xs-10">
@@ -72,10 +54,8 @@ require 'php/connectToDb.php';
                     <div id="characterName" class="col-xs-8">Jonny Smithersonson</div>
                     <div class="col-xs-4">
                         <div class="row">
-                            <div class="col-xs-12 center">Level 5</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 center">Half-Orc Barbarian</div>
+                            <div class="col-xs-6 center">Level 5</div>
+                            <div class="col-xs-6 center">Half-Orc Barbarian</div>
                         </div>
                     </div>
                 </div>
