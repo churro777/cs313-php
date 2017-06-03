@@ -27,9 +27,9 @@ try {
 
 echo "prepared <br />";
 // bind the variales to the corresponding item from the form on the previous page
-$statement->bindParam(':cn', $characterName, PDO::PARAM_STR);
-$statement->bindParam(':scoreType', $scoreType, PDO::PARAM_STR);
-$statement->bindParam(':str', $score, PDO::PARAM_INT);
+$statement->bindParam(':cn', $_SESSION["character"], PDO::PARAM_STR);
+$statement->bindParam(':scoreType', $STR, PDO::PARAM_STR);
+$statement->bindParam(':str', $_POST["str"], PDO::PARAM_INT);
 echo "binded <br />";
 
 // try execute and echo the exception if there is one
