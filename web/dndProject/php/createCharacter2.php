@@ -2,27 +2,28 @@
 // connect to the database
 require 'connectToDb.php';
 
-// prepare the insert statement
-$statement = $db->prepare('INSERT INTO character (player_id, charactername, race_id, class_id, level, experience)
-                            VALUES ((SELECT id FROM player WHERE username = :un),
-                                    :cn,
-                                    (SELECT id FROM race WHERE racename = :r),
-                                    (SELECT id FROM class WHERE classname = :c),
-                                    1, 1);');
-// bind the variales to the corresponding item from the form on the previous page
-$statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
-$statement->bindParam(':cn', $_POST["characterName"], PDO::PARAM_STR);
-$statement->bindParam(':r', $_POST["raceChoice"], PDO::PARAM_STR);
-$statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
+echo "STR - " . $_POST["str"] . "<br />";
+echo "DEX - " . $_POST["dex"] . "<br />";
+echo "CON - " . $_POST["con"] . "<br />";
+echo "INT - " . $_POST["int"] . "<br />";
+echo "WIS - " . $_POST["wis"] . "<br />";
+echo "CHA - " . $_POST["cha"] . "<br />";
 
-// try execute and echo the exception if there is one
-try {
-    $statement->execute();
-} catch (PDOException $ex) {
-    echo "Problem inserting character. Details: $ex";
-}
+// // prepare the insert statement
+// $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
+//                             VALUES ((SELECT id FROM character WHERE charactername = :cn), STR, :str);');
+// // bind the variales to the corresponding item from the form on the previous page
+// $statement->bindParam(':cn', $_SESSION["character"], PDO::PARAM_STR);
+// $statement->bindParam(':str', $_POST["str"], PDO::PARAM_STR);
+//
+// // try execute and echo the exception if there is one
+// try {
+//     $statement->execute();
+// } catch (PDOException $ex) {
+//     echo "Problem inserting character. Details: $ex";
+// }
 
 // send the user to the next creator page
-header("Location: ../creator_2_scores.php");
+//header("Location: ../creator_2_scores.php");
 
 ?>
