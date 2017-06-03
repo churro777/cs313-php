@@ -9,13 +9,15 @@ echo "INT - " . $_POST["int"] . "<br />";
 echo "WIS - " . $_POST["wis"] . "<br />";
 echo "CHA - " . $_POST["cha"] . "<br />";
 
-// // prepare the insert statement
-// $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
-//                             VALUES ((SELECT id FROM character WHERE charactername = :cn), STR, :str);');
-// // bind the variales to the corresponding item from the form on the previous page
-// $statement->bindParam(':cn', $_SESSION["character"], PDO::PARAM_STR);
-// $statement->bindParam(':str', $_POST["str"], PDO::PARAM_STR);
-//
+// prepare the insert statement
+$statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
+                            VALUES ((SELECT id FROM character WHERE charactername = :cn), STR, :str);');
+echo "prepared <br />";
+// bind the variales to the corresponding item from the form on the previous page
+$statement->bindParam(':cn', $_SESSION["character"], PDO::PARAM_STR);
+$statement->bindParam(':str', $_POST["str"], PDO::PARAM_STR);
+echo "binded <br />";
+
 // // try execute and echo the exception if there is one
 // try {
 //     $statement->execute();
