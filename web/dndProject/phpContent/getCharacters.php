@@ -9,7 +9,11 @@ echo "statement prepared <br />";
 $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
 echo "parameters bound <br />";
 
-$statement->execute();
+try {
+    $statement->execute();
+} catch (PDOException $ex) {
+    echo "Problem getting characters. Details: $ex";
+}
 
 
 $characterNames = $statment->fetchAll();
