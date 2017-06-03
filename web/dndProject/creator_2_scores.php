@@ -91,7 +91,7 @@
                         $scoreResult = $statement->fetchAll();
                     ?>
                     <div class="row white" style="padding:0 30px;">
-                        <div class="col-xs-12">Because of your race, <?php echo $_SESSION["race"];?>, you can
+                        <div class="col-xs-12">Because of your character's race, <?php echo $_SESSION["race"];?>, you can
                             increase the following scores after generating them.</div>
                     </div>
                     <div class="row white" style="padding:0 30px;">
