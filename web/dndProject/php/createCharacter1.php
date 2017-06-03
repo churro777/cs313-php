@@ -21,11 +21,12 @@ $statement->bindParam(':c', $_POST["classChoice"], PDO::PARAM_STR);
 // try execute and echo the exception if there is one
 try {
     $statement->execute();
+    // send the user to the next creator page
+    header("Location: ../creator_2_scores.php");
 } catch (PDOException $ex) {
     echo "Problem inserting character. Details: $ex";
 }
 
-// send the user to the next creator page
-header("Location: ../creator_2_scores.php");
+
 
 ?>

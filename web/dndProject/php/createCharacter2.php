@@ -26,7 +26,8 @@ function insertScore($characterName, $scoreType, $score){
     // prepare the insert statement
     try {
         echo "inside try for prepare <br />";
-        $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score) VALUES ((SELECT id FROM character WHERE charactername = :cn), :scoreType, :str);');
+        $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
+                                    VALUES ((SELECT id FROM character WHERE charactername = :cn), :scoreType, :str);');
     } catch (PDOException $ex) {
         echo "<br />Problem preparing statement. Details: $ex";
     }
