@@ -50,8 +50,8 @@
                     <?php
                         echo "before prepare <br />";
 
-                        if(!($statement = $db->prepare('SELECT abilityScore, increase FROM raceabilityscoreincrease
-                                                    WHERE race_id = (SELECT id FROM race WHERE racename = :rn);'))) {
+                        if(!($statement = $db->prepare('SELECT skill FROM classSkillProf
+                                                    WHERE class_id = (SELECT id FROM class WHERE classname = :cn);'))) {
                             echo "Prepare failed: (" . $db->errno . ") " . $db->error;
                         } else {
                             echo "worked???";
@@ -60,8 +60,6 @@
 
                         echo "prepared <br />";
                         $statement->bindParam(':cn', $_SESSION["class"], PDO::PARAM_STR);
-                        $class = "class";
-                        $statement->bindParam(':c', $class, PDO::PARAM_STR);
                         echo "prepared <br />";
                         try {
                             echo "about to execute <br />";
