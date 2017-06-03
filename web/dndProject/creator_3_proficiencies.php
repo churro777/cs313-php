@@ -46,11 +46,13 @@
                     </div>
 
                     <?php
+                        echo "before prepare <br />";
                         $statement = $db->prepare('SELECT skill FROM classSkillProf
                                                     WHERE class_id = (SELECT id FROM class WHERE classname = :cn);');
                         $statement->bindParam(':cn', $_SESSION["class"], PDO::PARAM_STR);
-
+                        echo "prepared <br />";
                         try {
+                            echo "about to execute <br />";
                             $statement->execute();
                         } catch (PDOException $ex) {
                             echo "Problem getting characters. Details: $ex";
