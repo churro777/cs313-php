@@ -48,9 +48,7 @@
                     <?php
                         echo "before prepare <br />";
 
-                        if(!($statement =
-                            $db->prepare("SELECT skill FROM classskillprof
-                                        WHERE class_id = (SELECT id FROM class WHERE classname = :cn);"))) {
+                        if(!($statement = $db->prepare("SELECT skill FROM classSkillProf WHERE class_id = (SELECT id FROM :c WHERE classname = :cn);"))) {
                             echo "Prepare failed: (" . $db->errno . ") " . $db->error;
                         } else {
                             echo "worked???";
@@ -59,6 +57,8 @@
 
                         echo "prepared <br />";
                         $statement->bindParam(':cn', $_SESSION["class"], PDO::PARAM_STR);
+                        $class = "class";
+                        $statement->bindParam(':c', $class, PDO::PARAM_STR);
                         echo "prepared <br />";
                         try {
                             echo "about to execute <br />";
