@@ -25,11 +25,11 @@ function insertScore($characterName, $scoreType, $score){
     echo "inside insertScore()";
     // prepare the insert statement
     $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
-                                VALUES ((SELECT id FROM character WHERE charactername = :cn), :type, :str);');
+                                VALUES ((SELECT id FROM character WHERE charactername = :cn), :scoreType, :str);');
     echo "prepared <br />";
     // bind the variales to the corresponding item from the form on the previous page
     $statement->bindParam(':cn', $characterName, PDO::PARAM_STR);
-    $statement->bindParam(':type', $scoreType, PDO::PARAM_STR);
+    $statement->bindParam(':scoreType', $scoreType, PDO::PARAM_STR);
     $statement->bindParam(':str', $score, PDO::PARAM_STR);
     echo "binded <br />";
 
