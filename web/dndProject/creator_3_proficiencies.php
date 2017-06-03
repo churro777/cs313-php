@@ -77,9 +77,9 @@
                     <div class="row white" style="padding:0 15px;">
                         <div class="col-xs-12">
                             <ul>
-                                <?php //foreach ($scoreResult as $scoreRow): ?>
-                                    <li><?php //echo $scoreRow[0];?></li>
-                                <?php //endforeach; ?>
+                                <?php foreach ($scoreResult as $scoreRow): ?>
+                                    <li><?php echo $scoreRow[0];?></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>
