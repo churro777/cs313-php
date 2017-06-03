@@ -97,9 +97,9 @@
                     <!-- <div class="row">
                         <div class="col-xs-12">
                             <ul>
-                                <?php foreach ($scoreResult as $scoreRow): ?>
-                                    <li>Increase <?php echo $scoreRow[0];?> by <?php echo $scoreRow[1];?></li>
-                                <?php endforeach; ?>
+                                <?php //foreach ($scoreResult as $scoreRow): ?>
+                                    <li>Increase <?php //echo $scoreRow[0];?> by <?php //echo $scoreRow[1];?></li>
+                                <?php //endforeach; ?>
                             </ul>
                         </div>
                     </div> -->
