@@ -50,7 +50,8 @@
                     <?php
                         echo "before prepare <br />";
 
-                        if(!($statement = $db->prepare("SELECT * FROM classSkillProf;"))) {
+                        if(!($statement = $db->prepare('SELECT abilityScore, increase FROM raceabilityscoreincrease
+                                                    WHERE race_id = (SELECT id FROM race WHERE racename = :rn);'))) {
                             echo "Prepare failed: (" . $db->errno . ") " . $db->error;
                         } else {
                             echo "worked???";
