@@ -39,7 +39,9 @@
             <div id="loginBox" class="col-xs-8 col-xs-offset-2 space-4">
                 <form id="loginForm" action="php/createCharacter.php" method="post">
                     <div class="form-group col-xs-12 space-2">
-                        <label for="characterName" class="creatorLabel"></label>
+                        <label for="characterName" class="creatorLabel">Let's get
+                            <?php echo $_SESSION["character"];?> Ability Scores
+                        </label>
                     </div>
 
                     <div class="form-group col-xs-12">
