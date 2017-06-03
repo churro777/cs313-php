@@ -38,8 +38,8 @@
 
         <div class="row">
 
-            <div id="loginBox" class="col-xs-8 col-xs-offset-2 space-4">
-                <form id="loginForm" action="php/createCharacter2.php" method="post">
+            <div class="createBox col-xs-8 col-xs-offset-2 space-4">
+                <form id="createAbilityScores" action="php/createCharacter2.php" method="post">
                     <div class="form-group col-xs-12 space-2">
                         <label for="characterName" class="creatorLabel">Let's get
                             <?php echo $_SESSION["character"];?>'s Ability Scores
@@ -90,11 +90,11 @@
 
                         $scoreResult = $statement->fetchAll();
                     ?>
-                    <div class="row white" style="padding:0 30px;">
+                    <div class="row white" style="padding:0 15px;">
                         <div class="col-xs-12">Because of your character's race, <?php echo $_SESSION["race"];?>, you can
                             increase the following scores after generating them.</div>
                     </div>
-                    <div class="row white" style="padding:0 30px;">
+                    <div class="row white" style="padding:0 15px;">
                         <div class="col-xs-12">
                             <ul>
                                 <?php foreach ($scoreResult as $scoreRow): ?>

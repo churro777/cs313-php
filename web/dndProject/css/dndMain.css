@@ -61,7 +61,7 @@ hr {
     color: white;
 }
 
-#loginBox {
+#loginBox, .createBox {
     background-color: red;
     border-radius: 1em;
     box-shadow: 10px 10px 5px grey;
@@ -82,4 +82,8 @@ hr {
 
 .creatorLabel {
     color: white;
+}
+
+.checkbox label{
+    color:white;
 }

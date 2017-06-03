@@ -31,46 +31,110 @@
             </div>
         </div>
         <div class="row">
-            <p class="col-xs-12 center">Next let's figure our your character's Ability Scores.</p>
+            <p class="col-xs-12 center">Proficiencies - Next let's figure our your character's Proficiencies. Or in
+                other words what your character is really good at.</p>
         </div>
 
         <div class="row">
 
-            <div id="loginBox" class="col-xs-8 col-xs-offset-2 space-4">
-                <form id="loginForm" action="php/createCharacter2.php" method="post">
+            <div class="createBox col-xs-8 col-xs-offset-2 space-4">
+                <form id="createProficiencies" action="php/createCharacter3.php" method="post">
                     <div class="form-group col-xs-12 space-2">
                         <label for="characterName" class="creatorLabel">Let's get
-                            <?php echo $_SESSION["character"];?>'s Ability Scores
+                            <?php echo $_SESSION["character"];?>'s Proficiencies
                         </label>
                     </div>
+
+                    <?php
+                        $statement = $db->prepare('SELECT skill FROM classSkillProf
+                                                    WHERE class_id = (SELECT id FROM class WHERE classname = :cn);');
+                        $statement->bindParam(':cn', $_SESSION["class"], PDO::PARAM_STR);
+
+                        try {
+                            $statement->execute();
+                        } catch (PDOException $ex) {
+                            echo "Problem getting characters. Details: $ex";
+                        }
+
+                        $scoreResult = $statement->fetchAll();
+                    ?>
+                    <div class="row white" style="padding:0 15px;">
+                        <div class="col-xs-12">Because of your character's class, <?php echo $_SESSION["class"];?>, you
+                            can choose from the following proficiencies:</div>
+                    </div>
+                    <div class="row white" style="padding:0 15px;">
+                        <div class="col-xs-12">
+                            <ul>
+                                <?php foreach ($scoreResult as $scoreRow): ?>
+                                    <li><?php echo $scoreRow[0];?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    </div>
+
+
                     <div class="form-group col-xs-12">
-                        <label class="creatorLabel">Ability Scores  -
-                            <a href="scores.php" class="white">How to generate Ability Scores</a>
-                        </label>
+                        <label class="creatorLabel">Proficiencies</label>
                         <div class="row">
-                            <div class="col-xs-2">
-                                <label for="str" class="creatorLabel">STR</label>
-                                <input type="number" class="form-control" id="str" name="str" value="10" min="1" max="20">
+                            <div class="col-xs-4">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Acrobatics" name="Acrobatics">Acrobatics (Dex)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Animal Handling" name="Animal Handling">Animal Handling (Wis)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Arcana" name="Arcana">Arcana (Int)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Athletics" name="Athletics">Athletics (Str)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Deception" name="Deception">Deception (Cha)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="History" name="History">History (Int)</label>
+                                </div>
                             </div>
-                            <div class="col-xs-2">
-                                <label for="str" class="creatorLabel">DEX</label>
-                                <input type="number" class="form-control" id="dex" name="dex" value="10" min="1" max="20">
+                            <div class="col-xs-4">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Insight" name="Insight">Insight (Wis)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Intimidation" name="Intimidation">Intimidation (Cha)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Investigation" name="Investigation">Investigation (Int)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Medicine" name="Medicine">Medicine (Wis)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Nature" name="Nature">Nature (Int)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Perception" name="Perception">Perception (Wis)</label>
+                                </div>
                             </div>
-                            <div class="col-xs-2">
-                                <label for="str" class="creatorLabel">CON</label>
-                                <input type="number" class="form-control" id="con" name="con" value="10" min="1" max="20">
-                            </div>
-                            <div class="col-xs-2">
-                                <label for="str" class="creatorLabel">INT</label>
-                                <input type="number" class="form-control" id="int" name="int" value="10" min="1" max="20">
-                            </div>
-                            <div class="col-xs-2">
-                                <label for="str" class="creatorLabel">WIS</label>
-                                <input type="number" class="form-control" id="wis" name="wis" value="10" min="1" max="20">
-                            </div>
-                            <div class="col-xs-2">
-                                <label for="str" class="creatorLabel">CHA</label>
-                                <input type="number" class="form-control" id="cha" name="cha" value="10" min="1" max="20">
+                            <div class="col-xs-4">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Performance" name="Performance">Performance (Cha)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Persuasion" name="Persuasion">Persuasion (Cha)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Religion" name="Religion">Religion (Int)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Sleight of Hand" name="SleightHand">Sleight of Hand (Dex)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Stealth" name="Stealth">Stealth (Dex)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="Survival" name="Survival">Survival (Wis)</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -83,6 +147,8 @@
 
             </div>
         </div>
+
+
 
     </body>
 </html>
