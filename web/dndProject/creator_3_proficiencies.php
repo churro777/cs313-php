@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+    require 'php/connectToDb.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
