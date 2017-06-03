@@ -24,27 +24,26 @@ echo "function worked";
 function insertScore($characterName, $scoreType, $score){
     echo "inside insertScore() <br />";
     // prepare the insert statement
-    // try {
-    //     echo "inside try for prepare <br />";
-    //     $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score)
-    //                                 VALUES ((SELECT id FROM character WHERE charactername = :cn), :scoreType, :str);');
-    // } catch (PDOException $ex) {
-    //     echo "<br />Problem preparing statement. Details: $ex";
-    // }
-    //
-    // echo "prepared <br />";
-    // // bind the variales to the corresponding item from the form on the previous page
-    // $statement->bindParam(':cn', $characterName, PDO::PARAM_STR);
-    // $statement->bindParam(':scoreType', $scoreType, PDO::PARAM_STR);
-    // $statement->bindParam(':str', $score, PDO::PARAM_INT);
-    // echo "binded <br />";
-    //
-    // // try execute and echo the exception if there is one
-    // try {
-    //     $statement->execute();
-    // } catch (PDOException $ex) {
-    //     echo "Problem inserting character. Details: $ex";
-    // }
+    try {
+        echo "inside try for prepare <br />";
+        $statement = $db->prepare('INSERT INTO abilityScores (character_id, type, score) VALUES ((SELECT id FROM character WHERE charactername = :cn), :scoreType, :str);');
+    } catch (PDOException $ex) {
+        echo "<br />Problem preparing statement. Details: $ex";
+    }
+
+    echo "prepared <br />";
+    // bind the variales to the corresponding item from the form on the previous page
+    $statement->bindParam(':cn', $characterName, PDO::PARAM_STR);
+    $statement->bindParam(':scoreType', $scoreType, PDO::PARAM_STR);
+    $statement->bindParam(':str', $score, PDO::PARAM_INT);
+    echo "binded <br />";
+
+    // try execute and echo the exception if there is one
+    try {
+        $statement->execute();
+    } catch (PDOException $ex) {
+        echo "Problem inserting character. Details: $ex";
+    }
 
     echo "success!!";
 }
