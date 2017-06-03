@@ -49,8 +49,8 @@
                         echo "before prepare <br />";
                         try {
                             echo "inside try for prepare <br />";
-                            $statement = $db->prepare('SELECT skill FROM classSkillProf
-                                                        WHERE class_id = (SELECT id FROM class WHERE classname = :cn);');
+                            $statement = $db->prepare("SELECT skill FROM classSkillProf
+                                                        WHERE class_id = (SELECT id FROM class WHERE classname = :cn);");
                         } catch (Exception $ex) {
                             echo "Problem getting characters. Details: $ex";
                         }
