@@ -47,13 +47,13 @@
 
                     <?php
                         echo "before prepare <br />";
-                        try {
-                            echo "inside try for prepare <br />";
-                            $statement = $db->prepare("SELECT skill FROM classSkillProf
-                                                        WHERE class_id = (SELECT id FROM class WHERE classname = :cn);");
-                        } catch (Exception $ex) {
-                            echo "Problem getting characters. Details: $ex";
+
+                        if(!($statement =
+                            $db->prepare("SELECT skill FROM classskillprof
+                                        WHERE class_id = (SELECT id FROM class WHERE classname = :cn);"))) {
+                            echo "Prepare failed: (" . $db->errno . ") " . $db->error;
                         }
+
 
                         echo "prepared <br />";
                         $statement->bindParam(':cn', $_SESSION["class"], PDO::PARAM_STR);
