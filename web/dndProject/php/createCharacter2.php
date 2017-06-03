@@ -18,12 +18,12 @@ $statement->bindParam(':cn', $_SESSION["character"], PDO::PARAM_STR);
 $statement->bindParam(':str', $_POST["str"], PDO::PARAM_STR);
 echo "binded <br />";
 
-// // try execute and echo the exception if there is one
-// try {
-//     $statement->execute();
-// } catch (PDOException $ex) {
-//     echo "Problem inserting character. Details: $ex";
-// }
+// try execute and echo the exception if there is one
+try {
+    $statement->execute();
+} catch (PDOException $ex) {
+    echo "Problem inserting character. Details: $ex";
+}
 
 // send the user to the next creator page
 //header("Location: ../creator_2_scores.php");
