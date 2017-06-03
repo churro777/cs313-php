@@ -68,15 +68,6 @@
                                 echo "2";
                             }?> from the following proficiencies:</div>
                     </div>
-                    <div class="row white" style="padding:0 15px;">
-                        <div class="col-xs-12">
-                            <ul>
-                                <?php foreach ($scoreResult as $scoreRow): ?>
-                                    <li><?php echo $scoreRow[0];?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    </div>
 
 
                     <div class="form-group col-xs-12">
@@ -84,8 +75,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <?php foreach ($scoreResult as $scoreRow): ?>
-                                    <li><?php echo $scoreRow[0];?></li>
-                                    <div class="checkbox">
+                                    <div class="checkbox-inline">
                                         <label><input type="checkbox" value="<?php echo $scoreRow[0];?>" name="<?php echo $scoreRow[0];?>"><?php echo $scoreRow[0];?></label>
                                     </div>
                                 <?php endforeach; ?>
