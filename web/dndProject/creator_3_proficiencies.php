@@ -55,7 +55,7 @@
                         } catch (PDOException $ex) {
                             echo "Problem getting characters. Details: $ex";
                         }
-
+                        echo "success!!";
                         $scoreResult = $statement->fetchAll();
                     ?>
                     <div class="row white" style="padding:0 15px;">
@@ -65,9 +65,9 @@
                     <div class="row white" style="padding:0 15px;">
                         <div class="col-xs-12">
                             <ul>
-                                <?php foreach ($scoreResult as $scoreRow): ?>
-                                    <li><?php echo $scoreRow[0];?></li>
-                                <?php endforeach; ?>
+                                <?php //foreach ($scoreResult as $scoreRow): ?>
+                                    <li><?php //echo $scoreRow[0];?></li>
+                                <?php //endforeach; ?>
                             </ul>
                         </div>
                     </div>
