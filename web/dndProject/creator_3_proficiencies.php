@@ -52,6 +52,8 @@
                             $db->prepare("SELECT skill FROM classskillprof
                                         WHERE class_id = (SELECT id FROM class WHERE classname = :cn);"))) {
                             echo "Prepare failed: (" . $db->errno . ") " . $db->error;
+                        } else {
+                            echo "worked???";
                         }
 
 
