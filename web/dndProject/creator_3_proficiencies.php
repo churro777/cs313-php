@@ -72,7 +72,13 @@
                     ?>
                     <div class="row white" style="padding:0 15px;">
                         <div class="col-xs-12">Because of your character's class, <?php echo $_SESSION["class"];?>, you
-                            can choose from the following proficiencies:</div>
+                            can choose <?php if ($_SESSION["class"] == "Bard" || $_SESSION["class"] == "Ranger") {
+                                echo "3";
+                            } elseif ($_SESSION["Rogue"]) {
+                                echo "4";
+                            } else {
+                                echo "2";
+                            }?> from the following proficiencies:</div>
                     </div>
                     <div class="row white" style="padding:0 15px;">
                         <div class="col-xs-12">
