@@ -14,6 +14,7 @@ try {
 } catch (PDOException $ex) {
     echo "Problem getting characters. Details: $ex";
 }
+echo "success!!";
 
 
 $characterNames = $statment->fetchAll();
