@@ -75,8 +75,9 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <?php foreach ($scoreResult as $scoreRow): ?>
-                                    <div class="checkbox-inline">
-                                        <label><input type="checkbox" value="<?php echo $scoreRow[0];?>" name="<?php echo $scoreRow[0];?>"><?php echo $scoreRow[0];?></label>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="<?php echo $scoreRow[0];?>"
+                                            name="<?php echo $scoreRow[0];?>"><?php echo $scoreRow[0];?></label>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
