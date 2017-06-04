@@ -6,7 +6,7 @@ function setupFunctions(){
 }
 
 
-function save(toBeSaved) {
+function save() {
     console.log(this);
     console.log("inside toBeSaved");
     console.log("saving " + toBeSaved);
