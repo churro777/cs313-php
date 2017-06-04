@@ -38,7 +38,7 @@
 
 <?php
 
-    $sql = 'SELECT featurename,featuredescription FROM classFeature
+    $sql = 'SELECT featurename,featuretext FROM classFeature
             WHERE class_id = (SELECT class_id FROM character
                              WHERE charactername = :c
                                  AND player_id = (SELECT id FROM player WHERE username = :un));';
