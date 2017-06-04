@@ -6,10 +6,7 @@ if (!isset($_SESSION["username"])) {
     header("Location: index.php");
 }
 
-if (isset($_SESSION["character"])) {
-    echo "character set " . $_SESSION["character"] . "<br /> <br />";
-} else {
-    echo "character not set yet <br />";
+if (!isset($_SESSION["character"])) {
     $sql = 'SELECT charactername FROM character
             WHERE player_id = (SELECT id FROM player WHERE username = :un);';
     $statement = $db->prepare($sql);
@@ -20,10 +17,10 @@ if (isset($_SESSION["character"])) {
     } catch (PDOException $ex) {
         echo "Problem getting characters. Details: $ex";
     }
-
     $_SESSION["character"] = $statement->fetch()[0];
-    echo "our guy - " . $_SESSION["character"];
 }
+
+echo "character = " . $_SESSION["character"];
 
 ?>
 <!DOCTYPE html>
