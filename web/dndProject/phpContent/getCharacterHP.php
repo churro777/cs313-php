@@ -1,7 +1,7 @@
 <?php
     $sql = 'SELECT maxHP, currentHP FROM character
-            WHERE ch.player_id = (SELECT id FROM player WHERE username = :un)
-                AND ch.characterName = :c;';
+            WHERE player_id = (SELECT id FROM player WHERE username = :un)
+                AND characterName = :c;';
     $statement = $db->prepare($sql);
     $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
     $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_STR);
