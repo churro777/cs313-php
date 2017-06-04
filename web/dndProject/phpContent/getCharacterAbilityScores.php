@@ -20,11 +20,25 @@
 
 <div class="row">
     <?php foreach ($scoreResult as $value): ?>
+        <?php
+        $sql = 'SELECT type, score FROM abilityScoreModifier
+                WHERE score = :x';
+        $statement = $db->prepare($sql);
+
+        $statement->bindParam(':n', $value[1], PDO::PARAM_INT);
+
+        try {
+            $statement->execute();
+        } catch (PDOException $ex) {
+            echo "Problem getting ability score modifier. Details: $ex";
+        }
+        $modResult = $statement->fetch();
+        ?>
         <div class="col-xs-2">
-            <div class="abilityScoreBox">
+            <div class="abilityScoreBox center">
                 <?php echo $value[0] ?>
                 <br />
-                <?php echo $value[1] ?>
+                <?php echo $value[1] ?> (<?php echo $modResult ?>)
             </div>
         </div>
     <?php endforeach; ?>
