@@ -25,8 +25,8 @@ function save(toBeSaved) {
 
 
 function saveCharacter(){
-
-    if (localStorage.characters == NULL) {
+    // lets create the characters array if doens't exist yet
+    if (localStorage.characters === undefined) {
         console.log("localStorage.characters is null");
         localStorage.characters = [];
     }
