@@ -41,11 +41,16 @@ function saveCharacter(){
     var newguy = new Character(character, character, currentHitDice, maxHP, currentHP, ac);
 
     var addNewGuy = true;
-    for(i = 0; i< localStorage.characters.length; i++){
-        if (localStorage.characters[i].name == newguy.name){
-            addNewGuy = false;
+    if (localStorage.characters.length != undefined) {
+        for(i = 0; i< localStorage.characters.length; i++){
+            if (localStorage.characters[i].name == newguy.name){
+                addNewGuy = false;
+            }
         }
+    } else {
+        console.log("localStorage is undefined");
     }
+
     if (addNewGuy) {
         localStorage.characters.push(newguy);
         console.log("added new guy");
