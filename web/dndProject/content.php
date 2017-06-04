@@ -52,7 +52,7 @@ if (!isset($_SESSION["character"])) {
         <script src="js/saveData.js"></script>
 
     </head>
-    <body class="container-fluid" onload="saveCharacter()">
+    <body class="container-fluid">
         <!-- The Row of Holding holds everything on the page -->
         <div id="rowOfHolding" class="row">
             <!-- leftside bar -->
