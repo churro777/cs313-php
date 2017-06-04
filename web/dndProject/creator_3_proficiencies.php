@@ -58,6 +58,7 @@
                         }
                         $scoreResult = $statement->fetchAll();
                     ?>
+                    <!-- tell the user how many choices they can choose -->
                     <div class="row white" style="padding:0 15px;">
                         <div class="col-xs-12">Because of your character's class, <?php echo $_SESSION["class"];?>, you
                             can choose <?php if ($_SESSION["class"] == "Bard" || $_SESSION["class"] == "Ranger") {
@@ -68,7 +69,6 @@
                                 echo "2";
                             }?> from the following proficiencies:</div>
                     </div>
-
 
                     <div class="form-group col-xs-12">
                         <label class="creatorLabel">Proficiencies</label>
