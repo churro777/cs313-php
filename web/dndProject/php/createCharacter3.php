@@ -4,9 +4,9 @@ echo "inside createCharacter3.php <br />";
 require 'connectToDb.php';
 echo "connected to db <br />";
 
-// if (issset($_SESSION["Acrobatics"])) {
-//     echo $_SESSION["Acrobatics"] . "<br />";
-// }
+if (issset($_POST["Acrobatics"])) {
+    echo $_POST["Acrobatics"] . "<br />";
+}
 // if (issset($_SESSION["Animal Handling"])) {
 //     echo $_SESSION["Animal Handling"] . "<br />";
 // }
