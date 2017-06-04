@@ -100,12 +100,7 @@ if (!isset($_SESSION["character"])) {
                             <!-- hit dice - total and how many left -->
                             <?php require 'phpContent/getCharacterHitDice.php' ?>
                             <!-- ac -->
-                            <div class="col-xs-4">
-                                <div class="row space-2">
-                                    <div class="col-xs-5 center" style="font-size:20px;">AC</div>
-                                    <input id="ac" class="col-xs-5" type="number" name="ac" min="0" onblur="save('ac')">
-                                </div>
-                            </div>
+                            <?php require 'phpContent/getCharacterAC.php' ?>
                         </div>
                         <hr>
                         <!-- skills and modifiers for each -->
