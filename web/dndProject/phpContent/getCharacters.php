@@ -16,7 +16,7 @@ $namesResult = $statement->fetchAll();
 
 <?php foreach ($namesResult as $nameArray): ?>
     <div class="row characterRow">
-        <a href="#" class="col-xs-12"><?php echo $nameArray[0]; ?></a>
+        <a href="#"><?php echo $nameArray[0]; ?></a>
     </div>
     <hr>
 <?php endforeach; ?>
