@@ -10,7 +10,8 @@ echo "<br /> <br /> <br />";
 
 
 foreach ($_POST as $value) {
-    echo "$_POST[$value]";
+    echo $value . "<br />";
+    echo $_POST[$value] . "<br />";
 }
 
 
