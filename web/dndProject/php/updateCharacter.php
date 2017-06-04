@@ -21,6 +21,7 @@
     $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
     $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_STR);
     echo "bound <br />";
+    echo $statement . "<br />";
     try {
         $statement->execute();
     } catch (PDOException $ex) {
