@@ -100,12 +100,12 @@ if (!isset($_SESSION["character"])) {
                             <!-- hp -->
                             <div class="col-xs-4">
                                 <div class="row">
-                                    <div class="col-xs-6">Max HP</div>
-                                    <input class="col-xs-6" type="number" name="maxHP" value="1">
+                                    <div class="col-xs-7">Max HP</div>
+                                    <input class="col-xs-5" type="number" name="maxHP" value="1">
                                 </div>
                                 <div class="row">
-                                    <div class="col-xs-6">Current HP</div>
-                                    <input class="col-xs-6" type="number" name="currentHP" value="1">
+                                    <div class="col-xs-7">Current HP</div>
+                                    <input class="col-xs-5" type="number" name="currentHP" value="1">
                                 </div>
                             </div>
 
