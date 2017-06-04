@@ -20,7 +20,7 @@ function saveCharacter(){
     console.log("inside saveCharacter");
     var character = document.getElementById('characterName').textContent;
     var currentHitDice = document.getElementById('currentHitDice').value;
-    var maxHp = document.getElementById('maxHp').value;
+    var maxHp = document.getElementById('maxHP').value;
     var currentHP = document.getElementById('currentHP').value;
     var AC = document.getElementById('AC').value;
 
