@@ -16,7 +16,7 @@
 
 <div id="hitDiceType" class="col-xs-4 leftBorder">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 center">
             Total <?php echo $_SESSION["level"] . $hitDiceResult[0] ?>
         </div>
     </div>

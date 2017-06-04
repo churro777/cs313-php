@@ -29,3 +29,10 @@
 .floatRight {
     float: right;
 }
+
+.noMarginRight {
+    margin-right: 0;
+}
+.noMarginLeft {
+    margin-left: 0;
+}
