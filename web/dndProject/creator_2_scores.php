@@ -1,6 +1,4 @@
-<?php session_start();
-    require 'php/connectToDb.php';
-?>
+<?php session_start(); require 'php/connectToDb.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -78,8 +76,9 @@
                     </div>
 
                     <?php
-                        $statement = $db->prepare('SELECT abilityScore, increase FROM raceabilityscoreincrease
-                                                    WHERE race_id = (SELECT id FROM race WHERE racename = :rn);');
+                        $sql = 'SELECT abilityScore, increase FROM raceabilityscoreincrease
+                                WHERE race_id = (SELECT id FROM race WHERE racename = :rn);';
+                        $statement = $db->prepare($sql);
                         $statement->bindParam(':rn', $_SESSION["race"], PDO::PARAM_STR);
 
                         try {
