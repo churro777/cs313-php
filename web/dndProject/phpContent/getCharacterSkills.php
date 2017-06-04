@@ -37,12 +37,13 @@
     <div class="col-xs-8"><?php echo $value["skill"]; ?></div>
     <div class="col-xs-2"><?php echo $value["abilityscore"]; ?></div>
     <div class="col-xs-2">
-        <?php if ($modResult[0] >=){
+        <?php if ($modResult[0] >= 0){
                 echo "+" . $modResult[0];
             }else {
                 echo $modResult[0];
             }?>
     </div>
 </div>
+<hr>
 
 <?php endforeach; ?>
