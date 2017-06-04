@@ -16,7 +16,7 @@ $namesResult = $statement->fetchAll();
 
 <?php foreach ($namesResult as $nameArray): ?>
     <div class="row characterRow">
-        <a href="#"><?php echo $nameArray[0]; ?></a>
+        <a href="changeCharacter.php?newCharacter=<?php echo $nameArray[0]; ?>"><?php echo $nameArray[0]; ?></a>
     </div>
     <hr>
 <?php endforeach; ?>

@@ -21,19 +21,18 @@
 <div class="row">
     <?php foreach ($scoreResult as $value): ?>
         <?php
-        $sql = 'SELECT modifier FROM abilityScoreModifier
-                WHERE score = :x';
-        $statement = $db->prepare($sql);
+            $sql = 'SELECT modifier FROM abilityScoreModifier
+                    WHERE score = :x';
+            $statement = $db->prepare($sql);
 
-        $statement->bindParam(':x', $value[1], PDO::PARAM_INT);
+            $statement->bindParam(':x', $value[1], PDO::PARAM_INT);
 
-        try {
-            $statement->execute();
-        } catch (PDOException $ex) {
-            echo "Problem getting ability score modifier. Details: $ex";
-        }
-        $modResult = $statement->fetch();
-        var_dump($modResult);
+            try {
+                $statement->execute();
+            } catch (PDOException $ex) {
+                echo "Problem getting ability score modifier. Details: $ex";
+            }
+            $modResult = $statement->fetch();
         ?>
         <div class="col-xs-2">
             <div class="abilityScoreBox center">
