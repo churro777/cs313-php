@@ -117,7 +117,11 @@ if (!isset($_SESSION["character"])) {
                         </div>
                         <hr>
                         <!-- skills and modifiers for each -->
-                        <?php require 'phpContent/getCharacterSkills.php'; ?>
+                        <div class="row" style="height:100; overflow:scroll;">
+                            <div class="col-xs-12">
+                                <?php require 'phpContent/getCharacterSkills.php'; ?>
+                            </div>
+                        </div>
                     </section>
 
 
