@@ -91,7 +91,7 @@ if (!isset($_SESSION["character"])) {
                 <!-- abiilty scores and modifiers -->
                 <?php require 'phpContent/getCharacterAbilityScores.php' ?>
                 <hr />
-                <div class="row">
+                <div class="row" style="height:calc(100vh -133px);">
                     <!-- left section -->
                     <section id="leftSide" class="col-xs-6">
                         <div class="row">
