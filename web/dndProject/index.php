@@ -1,4 +1,9 @@
-<?php session_start();?>
+<?php session_start();
+    unset($_SESSION["noCharacters"]);
+    unset($_SESSION["character"]);
+    unset($_SESSION["username"]);
+    var_dump($_SESSION)
+?>
 <!DOCTYPE html>
 <html>
     <head>

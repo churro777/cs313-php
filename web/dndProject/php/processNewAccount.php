@@ -21,7 +21,7 @@ $statement->execute();
 
 header("Location: ../index.php");
 
-$_SESSION["newUser"] = "false";
+unset($_SESSION["newUser"]);
 
 exit;
 ?>

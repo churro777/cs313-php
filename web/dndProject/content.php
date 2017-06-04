@@ -7,6 +7,9 @@ if (!isset($_SESSION["username"])) {
 }
 
 if (!isset($_SESSION["character"])) {
+    
+    unset($_SESSION["noCharacters"]);
+
     $sql = 'SELECT charactername FROM character
             WHERE player_id = (SELECT id FROM player WHERE username = :un);';
     $statement = $db->prepare($sql);
