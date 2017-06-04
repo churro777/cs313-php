@@ -1,12 +1,16 @@
 <?php session_start();
 
+    if (isset($db)){
+        echo "db set <br />";
+    }
+
     var_dump($_GET);
-    echo "before all teh sql stuff";
+    echo "before all teh sql stuff <br />";
     $sql = 'UPDATE character
             SET :col = :val
             WHERE player_id = (SELECT id FROM player WHERE username = :un)
                 AND charactername = :c';
-    echo "before prepping";
+    echo "before prepping <br />";
     $statement = $db->prepare($sql);
     echo "prepped <br />";
     $statement->bindParam(':col', $_GET["column"], PDO::PARAM_STR);
