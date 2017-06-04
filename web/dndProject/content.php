@@ -128,6 +128,7 @@ if (!isset($_SESSION["character"])) {
                     <!-- right section -->
                     <section class="col-xs-6">
                         <!-- features -->
+                        <?php require 'phpContent/getCharacterFeatures.php'; ?>
                     </section>
 
                 </div>
