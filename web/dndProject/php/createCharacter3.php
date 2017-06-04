@@ -13,8 +13,8 @@ if (isset($_POST["Acrobatics"])) {
 } else {
     echo "notAcrobatics <br />";
 }
-if (isset($_POST["Animal"])) {
-    echo $_POST["Animal"] . "<br />";
+if (isset($_POST["Animal_Handling"])) {
+    echo $_POST["Animal_Handling"] . "<br />";
 } else {
     echo "notAnimal Handling <br />";
 }
@@ -83,8 +83,8 @@ if (isset($_POST["Religion"])) {
 } else {
     echo "notReligion <br />";
 }
-if (isset($_POST["Sleight"])) {
-    echo $_POST["Sleight"] . "<br />";
+if (isset($_POST["Sleight_of_Hand"])) {
+    echo $_POST["Sleight_of_Hand"] . "<br />";
 } else {
     echo "notSleight of Hand <br />";
 }
