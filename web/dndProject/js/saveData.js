@@ -11,6 +11,6 @@ function save(toBeSaved){
 
 
 function saveCharacter(){
-    var character = document.getElementById('characterName').value;
+    var character = document.getElementById('characterName');
     console.log(character);
 }
