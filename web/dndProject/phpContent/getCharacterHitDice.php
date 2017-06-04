@@ -1,5 +1,5 @@
 <?php
-    $sql = 'SELECT cl.hitdicetype, cl.currentHitDice FROM character ch
+    $sql = 'SELECT cl.hitdicetype, ch.currentHitDice FROM character ch
                 INNER JOIN class cl ON ch.class_id = cl.id
             WHERE ch.player_id = (SELECT id FROM player WHERE username = :un)
                 AND ch.characterName = :c;';
@@ -9,7 +9,7 @@
     try {
         $statement->execute();
     } catch (PDOException $ex) {
-        echo "Problem getting characters. Details: $ex";
+        echo "Problem getting hit dice data. Details: $ex";
     }
     $hitDiceResult = $statement->fetch();
 ?>
