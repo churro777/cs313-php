@@ -1,8 +1,8 @@
 function setupFunctions(){
-    document.getElementById("ac").addEventListener("onblur", save);
-    document.getElementById("currentHitDice").addEventListener("onblur", save);
-    document.getElementById("maxHP").addEventListener("onblur", save);
-    document.getElementById("currentHP").addEventListener("onblur", save);
+    document.getElementById("ac").addEventListener("onblur", save, false);
+    document.getElementById("currentHitDice").addEventListener("onblur", save, false);
+    document.getElementById("maxHP").addEventListener("onblur", save, false);
+    document.getElementById("currentHP").addEventListener("onblur", save, false);
 }
 
 
