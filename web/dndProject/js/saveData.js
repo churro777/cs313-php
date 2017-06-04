@@ -36,4 +36,6 @@ function saveCharacter(){
     // localStorage.characters.push(new character());
 }
 
-funciton isCharacter()
+funciton isCharacter() {
+    console.log("inside isCharacter");
+}
