@@ -10,101 +10,28 @@ echo "<br /> <br /> <br />";
 
 
 foreach ($_POST as $value) {
-    echo $value . "<br />";
-    echo $_POST[$value] . "<br />";
-}
+    $sql = 'INSERT INTO characterProficiency (character_id, skill)
+            VALUES ((SELECT id FROM character WHERE charactername = :cn), :skill);';
+    echo "before prepare <br />";
+    try {
+        $statement = $db->prepare($sql);
+    } catch (PDOException $ex) {
+        echo "<br />Problem preparing statement. Details: $ex";
+    }
+    echo "prepared about to bound <br />";
+    $statement->bindParam(':cn', $_SESSION["character"], PDO::PARAM_STR);
+    $statement->bindParam(':skill', $value, PDO::PARAM_STR);
+    echo "bound, about to execute <br />";
+    try {
+        $statement->execute();
+    } catch (PDOException $ex) {
+        echo "<br />Problem inserting proficiency $value. Details: $ex";
+    }
+    echo "success <br />";
 
 
-if (isset($_POST["Acrobatics"])) {
-    echo $_POST["Acrobatics"] . "<br />";
-} else {
-    echo "notAcrobatics <br />";
 }
-if (isset($_POST["Animal_Handling"])) {
-    echo $_POST["Animal_Handling"] . "<br />";
-} else {
-    echo "notAnimal Handling <br />";
-}
-if (isset($_POST["Arcana"])) {
-    echo $_POST["Arcana"] . "<br />";
-} else {
-    echo "notArcana <br />";
-}
-if (isset($_POST["Athletics"])) {
-    echo $_POST["Athletics"] . "<br />";
-} else {
-    echo "notAthletics <br />";
-}
-if (isset($_POST["Deception"])) {
-    echo $_POST["Deception"] . "<br />";
-} else {
-    echo "notDeception <br />";
-}
-if (isset($_POST["History"])) {
-    echo $_POST["History"] . "<br />";
-} else {
-    echo "notHistory <br />";
-}
-if (isset($_POST["Insight"])) {
-    echo $_POST["Insight"] . "<br />";
-} else {
-    echo "notInsight <br />";
-}
-if (isset($_POST["Intimidation"])) {
-    echo $_POST["Intimidation"] . "<br />";
-} else {
-    echo "notIntimidation <br />";
-}
-if (isset($_POST["Investigation"])) {
-    echo $_POST["Investigation"] . "<br />";
-} else {
-    echo "notInvestigation <br />";
-}
-if (isset($_POST["Medicine"])) {
-    echo $_POST["Medicine"] . "<br />";
-} else {
-    echo "notMedicine <br />";
-}
-if (isset($_POST["Nature"])) {
-    echo $_POST["Nature"] . "<br />";
-} else {
-    echo "notNature <br />";
-}
-if (isset($_POST["Perception"])) {
-    echo $_POST["Perception"] . "<br />";
-} else {
-    echo "notPerception <br />";
-}
-if (isset($_POST["Performance"])) {
-    echo $_POST["Performance"] . "<br />";
-} else {
-    echo "notPerformance <br />";
-}
-if (isset($_POST["Persuasion"])) {
-    echo $_POST["Persuasion"] . "<br />";
-} else {
-    echo "notPersuasion <br />";
-}
-if (isset($_POST["Religion"])) {
-    echo $_POST["Religion"] . "<br />";
-} else {
-    echo "notReligion <br />";
-}
-if (isset($_POST["Sleight_of_Hand"])) {
-    echo $_POST["Sleight_of_Hand"] . "<br />";
-} else {
-    echo "notSleight of Hand <br />";
-}
-if (isset($_POST["Stealth"])) {
-    echo $_POST["Stealth"] . "<br />";
-} else {
-    echo "notStealth <br />";
-}
-if (isset($_POST["Survival"])) {
-    echo $_POST["Survival"] . "<br />";
-} else {
-    echo "notSurvival <br />";
-}
+
 
 
 
