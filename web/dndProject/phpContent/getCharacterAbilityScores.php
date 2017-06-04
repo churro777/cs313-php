@@ -21,7 +21,7 @@
 <div class="row">
     <?php foreach ($scoreResult as $value): ?>
         <?php
-        $sql = 'SELECT type, score FROM abilityScoreModifier
+        $sql = 'SELECT modifier FROM abilityScoreModifier
                 WHERE score = :x';
         $statement = $db->prepare($sql);
 
