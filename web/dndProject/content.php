@@ -49,8 +49,10 @@ if (!isset($_SESSION["character"])) {
         <link rel="stylesheet" href="css/dndMain.css">
         <link rel="stylesheet" href="css/basic.css">
 
+        <script src="js/saveData.js"></script>
+
     </head>
-    <body class="container-fluid">
+    <body class="container-fluid" onload="saveCharacter()">
         <!-- The Row of Holding holds everything on the page -->
         <div id="rowOfHolding" class="row">
             <!-- leftside bar -->
@@ -97,21 +99,20 @@ if (!isset($_SESSION["character"])) {
                             <div class="col-xs-4 leftBorder">
                                 <div class="row">
                                     <div class="col-xs-6 noPadRight">Max HP</div>
-                                    <input class="col-xs-5" type="number" name="maxHP" min="0">
+                                    <input class="col-xs-5" type="number" name="maxHP" min="0" onblur="save(maxHp)">
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-6 noPadRight">Current HP</div>
-                                    <input class="col-xs-5" type="number" name="currentHP" min="0">
+                                    <input class="col-xs-5" type="number" name="currentHP" min="0" onblur="save(currentHP)">
                                 </div>
                             </div>
-
                             <!-- hit dice - total and how many left -->
                             <?php require 'phpContent/getCharacterHitDice.php' ?>
                             <!-- ac -->
                             <div class="col-xs-4">
                                 <div class="row space-2">
                                     <div class="col-xs-5 center" style="font-size:20px;">AC</div>
-                                    <input class="col-xs-5" type="text" name="ac" min="0">
+                                    <input class="col-xs-5" type="text" name="ac" min="0" onblur="save(ac)">
                                 </div>
                             </div>
                         </div>
@@ -123,7 +124,6 @@ if (!isset($_SESSION["character"])) {
                             </div>
                         </div>
                     </section>
-
 
                     <!-- right section -->
                     <section class="col-xs-6">
