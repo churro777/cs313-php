@@ -51,6 +51,9 @@ function saveCharacter(){
         console.log("added new guy");
     }
 
+
+    console.log("Lets see whats in localStorage");
+    console.log(localStorage);
 }
 
 function isCharacter() {
