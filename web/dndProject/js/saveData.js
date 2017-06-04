@@ -22,7 +22,7 @@ function saveCharacter(){
     var currentHitDice = document.getElementById('currentHitDice').value;
     var maxHp = document.getElementById('maxHP').value;
     var currentHP = document.getElementById('currentHP').value;
-    var AC = document.getElementById('AC').value;
+    var ac = document.getElementById('ac').value;
 
     console.log("character" + character);
     console.log("currentHitDice" + currentHitDice);
@@ -30,7 +30,7 @@ function saveCharacter(){
     console.log("currentHP" + currentHP);
     console.log("AC" + AC);
 
-    //var newguy = new character(character, )
+    var newguy = new character(character, character, currentHitDice, maxHp, currentHP, ac);
 
     // if (localStorage.characters.find())
     // localStorage.characters.push(new character());
