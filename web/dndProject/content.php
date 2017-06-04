@@ -7,9 +7,6 @@ if (!isset($_SESSION["username"])) {
 }
 
 if (!isset($_SESSION["character"])) {
-    
-    unset($_SESSION["noCharacters"]);
-
     $sql = 'SELECT charactername FROM character
             WHERE player_id = (SELECT id FROM player WHERE username = :un);';
     $statement = $db->prepare($sql);
@@ -80,6 +77,7 @@ if (!isset($_SESSION["character"])) {
                         <br />It's easy. Just click on the New Character box on the left.</h2>
                 </div>
             </section>
+            <?php unset($_SESSION["noCharacters"]); ?>
             <?php else: ?>
             <!-- content -->
             <section id="content" class="col-xs-10">
