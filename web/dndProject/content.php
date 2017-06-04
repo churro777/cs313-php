@@ -82,15 +82,7 @@ if (!isset($_SESSION["character"])) {
             <!-- content -->
             <section id="content" class="col-xs-10">
                 <!-- name and race and class -->
-                <div class="row">
-                    <div id="characterName" class="col-xs-8">Jonny Smithersonson</div>
-                    <div class="col-xs-4">
-                        <div id="levelClassRaceContainer" class="row">
-                            <div class="col-xs-4 center">Level 5</div>
-                            <div class="col-xs-8 center">Half-Orc Barbarian</div>
-                        </div>
-                    </div>
-                </div>
+                <?php require 'phpContent/getCharacterInfo.php' ?>
                 <hr>
                 <!-- abiilty scores and modifiers -->
                 <div id="" class="row">
