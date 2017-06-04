@@ -38,10 +38,13 @@
 
 <?php
 
-    $sql = 'SELECT featurename,featuretext FROM classFeature
+    $sql = 'SELECT featurename FROM classFeature
             WHERE class_id = (SELECT class_id FROM character
-                             WHERE charactername = :c
-                                 AND player_id = (SELECT id FROM player WHERE username = :un));';
+                              WHERE charactername = :c
+                                  AND player_id = (SELECT id FROM player WHERE username = :un))
+                AND level <= (SELECT level FROM character
+                              WHERE charactername = :c
+                                  AND player_id = (SELECT id FROM player WHERE username = :un));';
     $statement = $db->prepare($sql);
     $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_INT);
     $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_INT);
