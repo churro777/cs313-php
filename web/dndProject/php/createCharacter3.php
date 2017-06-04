@@ -7,57 +7,57 @@ echo "connected to db <br />";
 if (issset($_POST["Acrobatics"])) {
     echo $_POST["Acrobatics"] . "<br />";
 }
-// if (issset($_SESSION["Animal Handling"])) {
-//     echo $_SESSION["Animal Handling"] . "<br />";
-// }
-// if (issset($_SESSION["Arcana"])) {
-//     echo $_SESSION["Arcana"] . "<br />";
-// }
-// if (issset($_SESSION["Athletics"])) {
-//     echo $_SESSION["Athletics"] . "<br />";
-// }
-// if (issset($_SESSION["Deception"])) {
-//     echo $_SESSION["Deception"] . "<br />";
-// }
-// if (issset($_SESSION["History"])) {
-//     echo $_SESSION["History"] . "<br />";
-// }
-// if (issset($_SESSION["Insight"])) {
-//     echo $_SESSION["Insight"] . "<br />";
-// }
-// if (issset($_SESSION["Intimidation"])) {
-//     echo $_SESSION["Intimidation"] . "<br />";
-// }
-// if (issset($_SESSION["Investigation"])) {
-//     echo $_SESSION["Investigation"] . "<br />";
-// }
-// if (issset($_SESSION["Medicine"])) {
-//     echo $_SESSION["Medicine"] . "<br />";
-// }
-// if (issset($_SESSION["Nature"])) {
-//     echo $_SESSION["Nature"] . "<br />";
-// }
-// if (issset($_SESSION["Perception"])) {
-//     echo $_SESSION["Perception"] . "<br />";
-// }
-// if (issset($_SESSION["Performance"])) {
-//     echo $_SESSION["Performance"] . "<br />";
-// }
-// if (issset($_SESSION["Persuasion"])) {
-//     echo $_SESSION["Persuasion"] . "<br />";
-// }
-// if (issset($_SESSION["Religion"])) {
-//     echo $_SESSION["Religion"] . "<br />";
-// }
-// if (issset($_SESSION["Sleight of Hand"])) {
-//     echo $_SESSION["Sleight of Hand"] . "<br />";
-// }
-// if (issset($_SESSION["Stealth"])) {
-//     echo $_SESSION["Stealth"] . "<br />";
-// }
-// if (issset($_SESSION["Survival"])) {
-//     echo $_SESSION["Survival"] . "<br />";
-// }
+if (issset($_POST["Animal Handling"])) {
+    echo $_POST["Animal Handling"] . "<br />";
+}
+if (issset($_POST["Arcana"])) {
+    echo $_POST["Arcana"] . "<br />";
+}
+if (issset($_POST["Athletics"])) {
+    echo $_POST["Athletics"] . "<br />";
+}
+if (issset($_POST["Deception"])) {
+    echo $_POST["Deception"] . "<br />";
+}
+if (issset($_POST["History"])) {
+    echo $_POST["History"] . "<br />";
+}
+if (issset($_POST["Insight"])) {
+    echo $_POST["Insight"] . "<br />";
+}
+if (issset($_POST["Intimidation"])) {
+    echo $_POST["Intimidation"] . "<br />";
+}
+if (issset($_POST["Investigation"])) {
+    echo $_POST["Investigation"] . "<br />";
+}
+if (issset($_POST["Medicine"])) {
+    echo $_POST["Medicine"] . "<br />";
+}
+if (issset($_POST["Nature"])) {
+    echo $_POST["Nature"] . "<br />";
+}
+if (issset($_POST["Perception"])) {
+    echo $_POST["Perception"] . "<br />";
+}
+if (issset($_POST["Performance"])) {
+    echo $_POST["Performance"] . "<br />";
+}
+if (issset($_POST["Persuasion"])) {
+    echo $_POST["Persuasion"] . "<br />";
+}
+if (issset($_POST["Religion"])) {
+    echo $_POST["Religion"] . "<br />";
+}
+if (issset($_POST["Sleight of Hand"])) {
+    echo $_POST["Sleight of Hand"] . "<br />";
+}
+if (issset($_POST["Stealth"])) {
+    echo $_POST["Stealth"] . "<br />";
+}
+if (issset($_POST["Survival"])) {
+    echo $_POST["Survival"] . "<br />";
+}
 
 
 
