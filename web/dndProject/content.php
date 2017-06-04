@@ -1,6 +1,6 @@
 <?php session_start(); require 'php/connectToDb.php';
 
-var_dump($_SESSION);
+//var_dump($_SESSION);
 
 if (!isset($_SESSION["username"])) {
     header("Location: index.php");
@@ -27,8 +27,6 @@ if (!isset($_SESSION["character"])) {
     }
 
 }
-
-echo "character = " . $_SESSION["character"];
 
 ?>
 <!DOCTYPE html>
@@ -71,18 +69,12 @@ echo "character = " . $_SESSION["character"];
                 <!-- generate the characters the user has -->
                 <?php require 'phpContent/getCharacters.php' ?>
             </section>
-            <?php if (false): ?>
-                <?php echo "this is cuz its true" ?>
-            <?php else: ?>
-                <?php echo "this is cuz its false" ?>
-            <?php endif; ?>
-
-
+            <!-- if the player has no characters saved then tell them to make a character -->
             <?php if ($_SESSION["noCharacters"]): ?>
             <section class="col-xs-10">
                 <div class="row">
                     <h2 class="col-xs-12 center">Hey <?php echo $_SESSION["username"] ?>, you should make a character.
-                        It's easy. Just click on the New Character box on the left.</h2>
+                        <br />It's easy. Just click on the New Character box on the left.</h2>
                 </div>
             </section>
             <?php else: ?>
