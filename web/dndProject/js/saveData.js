@@ -17,19 +17,20 @@ function save(toBeSaved){
 
 
 function saveCharacter(){
+    console.log("inside saveCharacter");
     var character = document.getElementById('characterName').textContent;
     var currentHitDice = document.getElementById('currentHitDice').value;
     var maxHp = document.getElementById('maxHp').value;
     var currentHP = document.getElementById('currentHP').value;
     var AC = document.getElementById('AC').value;
 
-    console.log(character);
-    console.log(currentHitDice);
-    console.log(maxHp);
-    console.log(currentHP);
-    console.log(AC);
+    console.log("character" + character);
+    console.log("currentHitDice" + currentHitDice);
+    console.log("maxHp" + maxHp);
+    console.log("currentHP" + currentHP);
+    console.log("AC" + AC);
 
-    var newguy = new character(character, )
+    //var newguy = new character(character, )
 
     // if (localStorage.characters.find())
     // localStorage.characters.push(new character());
