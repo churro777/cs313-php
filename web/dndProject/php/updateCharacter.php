@@ -12,6 +12,8 @@
 
     echo $_GET["column"] . "<br />";
     echo $_GET["value"] . "<br />";
+    echo $_SESSION["username"] . "<br />";
+    echo $_SESSION["character"] . "<br />";
 
     $sql = 'UPDATE character
             SET :col = :val
