@@ -2,14 +2,18 @@
     $sql = 'SELECT maxHP, currentHP FROM character
             WHERE player_id = (SELECT id FROM player WHERE username = :un)
                 AND characterName = :c;';
+    echo "sql created <br />";
     $statement = $db->prepare($sql);
+    echo "prepped <br />";
     $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
     $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_STR);
+    echo "bound <br />";
     try {
         $statement->execute();
     } catch (PDOException $ex) {
         echo "Problem getting characters. Details: $ex";
     }
+    echo "success!!! <br />";
     $hpResult = $statement->fetch();
     var_dump($hitDiceResult);
 ?>
@@ -18,11 +22,11 @@
     <div class="row">
         <div class="col-xs-6 noPadRight">Max HP</div>
         <input id="maxHP" class="col-xs-5" type="number" name="maxHP" min="0"
-            value="<php echo $hpResult[]; ?>" onblur="save('maxHP')">
+            value="<php echo $hpResult[0]; ?>" onblur="save('maxHP')">
     </div>
     <div class="row">
         <div class="col-xs-6 noPadRight">Current HP</div>
         <input id="currentHP" class="col-xs-5" type="number" name="currentHP" min="0"
-            value="<php echo $hpResult[]; ?>"  onblur="save('currentHP')">
+            value="<php echo $hpResult[1]; ?>"  onblur="save('currentHP')">
     </div>
 </div>
