@@ -27,10 +27,10 @@
 
 <?php foreach ($featureResult as $value): ?>
     <div class="row">
-        <div class="col-xs-12">$value[0]</div>
+        <div class="col-xs-12"><?php echo $value[0]; ?></div>
     </div>
     <div class="row">
-        <div class="col-xs-12">$value[1]</div>
+        <div class="col-xs-12"><?php echo $value[1]; ?></div>
     </div>
     <hr>
 <?php endforeach; ?>
