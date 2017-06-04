@@ -22,6 +22,7 @@
     echo $scoreResult[0] . "<br />";
     echo $scoreResult[1] . "<br />";
     echo $scoreResult[2] . "<br />";
+    var_dump($scoreResult);
 ?>
 
 
