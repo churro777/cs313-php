@@ -81,7 +81,8 @@ echo "character = " . $_SESSION["character"];
             <?php if ($_SESSION["noCharacters"]): ?>
             <section class="col-xs-10">
                 <div class="row">
-                    <h2 class="col-xs-12 center">Hey you should make a character</h2>
+                    <h2 class="col-xs-12 center">Hey <?php echo $_SESSION["username"] ?>, you should make a character.
+                        It's easy. Just click on the New Character box on the left.</h2>
                 </div>
             </section>
             <?php else: ?>
