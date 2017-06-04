@@ -5,8 +5,9 @@ if (!isset($_SESSION["username"])) {
 }
 
 if (isset($_SESSION["character"])) {
-    echo "our guy " . $_SESSION["character"] . "<br /> <br />";
+    echo "character set " . $_SESSION["character"] . "<br /> <br />";
 } else {
+    echo "character not set yet <br />";
     $sql = 'SELECT charactername FROM character
             WHERE player_id = (SELECT id FROM player WHERE username = :un);';
     $statement = $db->prepare($sql);
