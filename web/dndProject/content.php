@@ -7,7 +7,19 @@ if (!isset($_SESSION["username"])) {
 if (isset($_SESSION["character"])) {
     echo "our guy " . $_SESSION["character"] . "<br /> <br />";
 } else {
-    echo "<br />no character chosen<br />";
+    $sql = 'SELECT charactername FROM character
+            WHERE player_id = (SELECT id FROM player WHERE username = :un);';
+    $statement = $db->prepare($sql);
+    $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
+
+    try {
+        $statement->execute();
+    } catch (PDOException $ex) {
+        echo "Problem getting characters. Details: $ex";
+    }
+
+    $_SESSION["character"] = $statement->fetch();
+    echo "our guy - " . $_SESSION["character"];
 }
 
 ?>
