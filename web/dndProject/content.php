@@ -104,7 +104,7 @@ if (!isset($_SESSION["character"])) {
                         </div>
                         <hr>
                         <!-- skills and modifiers for each -->
-                        <div class="row" style="height:100; overflow:scroll;">
+                        <div class="row" style="height: calc(100vh - 249px); overflow:scroll;">
                             <div class="col-xs-12">
                                 <?php require 'phpContent/getCharacterSkills.php'; ?>
                             </div>
@@ -112,7 +112,7 @@ if (!isset($_SESSION["character"])) {
                     </section>
 
                     <!-- right section -->
-                    <section class="col-xs-6">
+                    <section class="col-xs-6" style="overflow: scroll; height: calc(100vh - 175px);">
                         <!-- features -->
                         <?php require 'phpContent/getCharacterFeatures.php'; ?>
                     </section>

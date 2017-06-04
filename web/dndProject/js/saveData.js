@@ -1,3 +1,8 @@
+function setupFunctions(){
+    
+}
+
+
 function save(toBeSaved) {
     console.log("inside toBeSaved");
     console.log("saving " + toBeSaved);
