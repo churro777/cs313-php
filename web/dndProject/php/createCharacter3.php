@@ -8,6 +8,12 @@ echo "<br /> <br /> <br />";
 var_dump($_POST);
 echo "<br /> <br /> <br />";
 
+
+foreach ($_POST as $value) {
+    echo "$_POST[$value]";
+}
+
+
 if (isset($_POST["Acrobatics"])) {
     echo $_POST["Acrobatics"] . "<br />";
 } else {
