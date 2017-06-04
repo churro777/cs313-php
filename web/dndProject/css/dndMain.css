@@ -18,6 +18,7 @@ hr {
 #sidebar {
     background-color: rgb(244, 67, 54);
     height: 100vh;
+    overflow: scroll;
 }
 
 .characterRow>a, .characterRow>a:hover {

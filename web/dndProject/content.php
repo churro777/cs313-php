@@ -1,10 +1,14 @@
-<?php session_start();
+<?php session_start(); require 'php/connectToDb.php';
 
 if (!isset($_SESSION["username"])) {
     header("Location: index.php");
 }
 
-require 'php/connectToDb.php';
+if (isset($_SESSION["character"])) {
+    echo "our guy " . $_SESSION["character"] . "<br /> <br />";
+} else {
+    echo "<br />no character chosen<br />";
+}
 
 ?>
 <!DOCTYPE html>

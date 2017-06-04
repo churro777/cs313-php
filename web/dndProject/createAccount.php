@@ -1,7 +1,4 @@
-<?php
-session_start();
-$_SESSION["newUser"] = "true";
-?>
+<?php session_start(); $_SESSION["newUser"] = "true"; ?>
 <!DOCTYPE html>
 <html>
     <head>

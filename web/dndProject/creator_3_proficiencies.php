@@ -1,6 +1,4 @@
-<?php session_start();
-    require 'php/connectToDb.php';
-?>
+<?php session_start(); require 'php/connectToDb.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,9 +34,7 @@
             <p class="col-xs-12 center">Proficiencies - Next let's figure our your character's Proficiencies. Or in
                 other words what your character is really good at.</p>
         </div>
-
         <div class="row">
-
             <div class="createBox col-xs-8 col-xs-offset-2 space-4">
                 <form id="createProficiencies" action="php/createCharacter3.php" method="post">
                     <div class="form-group col-xs-12 space-2">
