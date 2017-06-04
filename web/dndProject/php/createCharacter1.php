@@ -8,8 +8,8 @@ $_SESSION["race"] = $_POST["raceChoice"];
 $_SESSION["class"] = $_POST["classChoice"];
 
 // prepare the insert statement
-$statement = $db->prepare('INSERT INTO character (player_id, charactername, race_id, class_id, level, experience,
-                                                  experience, maxHP, currentHitDice, maxHP, currentHP,ac)
+$statement = $db->prepare('INSERT INTO character (player_id, charactername, race_id, class_id,
+                                                  level, experience, maxHP, currentHitDice, maxHP, currentHP,ac)
                             VALUES ((SELECT id FROM player WHERE username = :un),
                                     :cn,
                                     (SELECT id FROM race WHERE racename = :r),
