@@ -25,7 +25,7 @@
                 WHERE score = :x';
         $statement = $db->prepare($sql);
 
-        $statement->bindParam(':n', $value[1], PDO::PARAM_INT);
+        $statement->bindParam(':x', $value[1], PDO::PARAM_INT);
 
         try {
             $statement->execute();
