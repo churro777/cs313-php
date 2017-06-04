@@ -16,6 +16,9 @@
     }
 
     $scoreResult = $statement->fetch();
+
+    // will be used for hitdicetype
+    $_SESSION["level"] = $scoreResult[1];
 ?>
 
 <div class="row">

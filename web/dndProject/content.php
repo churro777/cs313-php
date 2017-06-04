@@ -116,7 +116,7 @@ if (!isset($_SESSION["character"])) {
                                 AC <input type="text" name="" value="">
                             </div>
                         </div>
-
+                        <hr>
                         <!-- skills and modifiers for each -->
                         <div class="row">
                             <div class="col-xs-12">
