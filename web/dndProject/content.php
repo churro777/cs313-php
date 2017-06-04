@@ -21,7 +21,7 @@ if (isset($_SESSION["character"])) {
         echo "Problem getting characters. Details: $ex";
     }
 
-    $_SESSION["character"] = $statement->fetch();
+    $_SESSION["character"] = $statement->fetch()[0];
     echo "our guy - " . $_SESSION["character"];
 }
 
