@@ -18,11 +18,14 @@ if (!isset($_SESSION["character"])) {
         echo "Problem getting characters. Details: $ex";
     }
     $_SESSION["character"] = $statement->fetch()[0];
-    if(isset($_SESSION["character"])){
-        echo "cool";
-    } else {
-        echo "still no character";
+    if(!isset($_SESSION["character"])){
+        $_SESSION["noCharacters"] = true;
     }
+
+    if ($_SESSION["noCharacters"]) {
+        echo "just seeing if checking bool session variables works this way";
+    }
+
 }
 
 echo "character = " . $_SESSION["character"];
