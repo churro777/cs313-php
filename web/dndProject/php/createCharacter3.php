@@ -10,6 +10,7 @@ echo "<br /> <br /> <br />";
 
 
 foreach ($_POST as $value) {
+    echo "<br /><br /><br /><br />" . $value . "<br />";
     $sql = 'INSERT INTO characterProficiency (character_id, skill)
             VALUES ((SELECT id FROM character WHERE charactername = :cn), :skill);';
     echo "before prepare <br />";
