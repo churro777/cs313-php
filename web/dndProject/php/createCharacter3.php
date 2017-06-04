@@ -4,6 +4,10 @@ echo "inside createCharacter3.php <br />";
 require 'connectToDb.php';
 echo "connected to db <br />";
 
+echo "<br /> <br /> <br />";
+var_dump($_POST);
+echo "<br /> <br /> <br />";
+
 if (isset($_POST["Acrobatics"])) {
     echo $_POST["Acrobatics"] . "<br />";
 } else {
