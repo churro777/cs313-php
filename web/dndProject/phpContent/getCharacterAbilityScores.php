@@ -1,8 +1,5 @@
 <?php
-    echo $_SESSION["character"] . "<br />";
-    echo $_SESSION["username"] . "<br />";
 
-    echo "inside getCharacterAbilityScores <br />";
     $sql = 'SELECT type, score FROM abilityScores
             WHERE character_id = (SELECT id FROM character
                                   WHERE charactername = :c
@@ -12,19 +9,14 @@
     $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_STR);
     $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
 
-    echo "prepared and bound <br />";
     try {
         $statement->execute();
     } catch (PDOException $ex) {
         echo "Problem getting characters. Details: $ex";
     }
-    echo "executed successfully <br />";
     $scoreResult = $statement->fetchAll();
-    echo "scoreResult = " . $scoreResult . "<br />";
 
-    var_dump($scoreResult);
 ?>
-
 
 <div class="row">
     <?php foreach ($scoreResult as $value): ?>
@@ -32,7 +24,7 @@
             <div class="abilityScoreBox">
                 <?php echo $value[0] ?>
                 <br />
-                <?php echo $value[0] ?>
+                <?php echo $value[1] ?>
             </div>
         </div>
     <?php endforeach; ?>
