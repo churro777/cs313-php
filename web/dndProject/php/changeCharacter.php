@@ -1,4 +1,5 @@
 <?php
     $_SESSION["character"] = $_GET["newCharacter"];
-    header("Location: ../index.php");
+    var_dump($_SESSION);
+    //header("Location: ../index.php");
 ?>

@@ -6,7 +6,9 @@ if (!isset($_SESSION["username"])) {
     header("Location: index.php");
 }
 
+// if no character is presently chosen to be displayed
 if (!isset($_SESSION["character"])) {
+    // query the players chracters
     $sql = 'SELECT charactername FROM character
             WHERE player_id = (SELECT id FROM player WHERE username = :un);';
     $statement = $db->prepare($sql);
@@ -17,15 +19,15 @@ if (!isset($_SESSION["character"])) {
     } catch (PDOException $ex) {
         echo "Problem getting characters. Details: $ex";
     }
+    // set the first one to be displayed
     $_SESSION["character"] = $statement->fetch()[0];
-    // If player has no characters saved them set noCharacters to true
+    // If player has no characters saved, then set noCharacters to true
     if(!isset($_SESSION["character"])){
         $_SESSION["noCharacters"] = true;
     } else {
         // otherwise unset noCharacters. Don't want it activating when it shouldnt be
         unset($_SESSION["noCharacters"]);
     }
-
 }
 
 ?>
