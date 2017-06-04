@@ -36,3 +36,11 @@
 .noMarginLeft {
     margin-left: 0;
 }
+
+.noPadRight {
+    padding-right: 0;
+}
+
+.noPadLeft {
+    padding-left: 0;
+}

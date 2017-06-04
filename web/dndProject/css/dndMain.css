@@ -91,7 +91,7 @@ hr {
     color:white;
 }
 
-#leftSide {
+#leftSide, .leftBorder {
     border-right: solid 1px;
 }
 
