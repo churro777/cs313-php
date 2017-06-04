@@ -33,12 +33,13 @@
             echo "Problem getting ability score modifier. Details: $ex";
         }
         $modResult = $statement->fetch();
+        var_dump($modResult);
         ?>
         <div class="col-xs-2">
             <div class="abilityScoreBox center">
                 <?php echo $value[0] ?>
                 <br />
-                <?php echo $value[1] ?> (<?php echo $modResult ?>)
+                <?php echo $value[1] ?> (<?php echo $modResult[0] ?>)
             </div>
         </div>
     <?php endforeach; ?>
