@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-xs-6 noPadRight">Max HP</div>
         <?php echo "<input id='maxHP' class='col-xs-5' type='number' name='maxHP' min='0'
-            value=" .  $hpResult[0] . " onblur='save('maxHP')'>"; ?>
+            value='" .  $hpResult[0] . "'>"; ?>
 
     </div>
     <div class="row">
