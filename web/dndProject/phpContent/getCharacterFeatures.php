@@ -15,8 +15,6 @@
     }
 
     $featureResult = $statement->fetchAll();
-
-    var_dump($featureResult);
 ?>
 <?php if (!$_SESSION["race"] == "Human"): ?>
     <div class="row">
@@ -27,7 +25,46 @@
 
 <?php foreach ($featureResult as $value): ?>
     <div class="row">
-        <div class="col-xs-12"><?php echo $value[0]; ?></div>
+        <b class="col-xs-12"><?php echo $value[0]; ?></b>
+    </div>
+    <div class="row">
+        <div class="col-xs-12"><?php echo $value[1]; ?></div>
+    </div>
+    <hr>
+<?php endforeach; ?>
+
+
+
+
+<?php
+
+    $sql = 'SELECT featurename,featuredescription FROM classFeature
+            WHERE class_id = (SELECT class_id FROM character
+                             WHERE charactername = :c
+                                 AND player_id = (SELECT id FROM player WHERE username = :un));';
+    $statement = $db->prepare($sql);
+    $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_INT);
+    $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_INT);
+
+    try {
+        $statement->execute();
+    } catch (PDOException $ex) {
+        echo "Problem getting characters. Details: $ex";
+    }
+
+    $featureResult = $statement->fetchAll();
+
+    var_dump($featureResult);
+?>
+
+<div class="row">
+    <h3 class="col-xs-12">Class Features</h3>
+</div>
+<hr>
+
+<?php foreach ($featureResult as $value): ?>
+    <div class="row">
+        <b class="col-xs-12"><?php echo $value[0]; ?></b>
     </div>
     <div class="row">
         <div class="col-xs-12"><?php echo $value[1]; ?></div>
