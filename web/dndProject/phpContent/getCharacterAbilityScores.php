@@ -1,5 +1,7 @@
 <?php
-    //require '../php/connectToDb.php';
+    echo $_SESSION["character"] . "<br />";
+    echo $_SESSION["username"] . "<br />";
+
     echo "inside getCharacterAbilityScores <br />";
     $sql = 'SELECT type, score FROM abilityScores
             WHERE character_id = (SELECT id FROM character
@@ -19,9 +21,7 @@
     echo "executed successfully <br />";
     $scoreResult = $statement->fetchAll();
     echo "scoreResult = " . $scoreResult . "<br />";
-    echo $scoreResult[0] . "<br />";
-    echo $scoreResult[1] . "<br />";
-    echo $scoreResult[2] . "<br />";
+
     var_dump($scoreResult);
 ?>
 
