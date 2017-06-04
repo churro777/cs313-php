@@ -1,7 +1,7 @@
 <?php session_start();
 
     require 'connectToDb.php';
-    
+
     if (isset($db)){
         echo "db set <br />";
     }
@@ -12,7 +12,7 @@
     $sql = 'UPDATE character
             SET :col = :val
             WHERE player_id = (SELECT id FROM player WHERE username = :un)
-                AND charactername = :c';
+                AND charactername = :c ;';
     echo "before prepping <br />";
     $statement = $db->prepare($sql);
     echo "prepped <br />";
@@ -24,7 +24,7 @@
     try {
         $statement->execute();
     } catch (PDOException $ex) {
-        echo "Problem getting characters. Details: $ex";
+        echo "Problem updating characters. Details: $ex";
     }
     echo "success <br />";
 
