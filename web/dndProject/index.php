@@ -34,9 +34,10 @@
         <div class="row">
             <p class="col-xs-12 center">Where you can create and store your characters.</p>
         </div>
+        <!-- alert if badlogin and unset the variable badlogin, that way it disappears once the leave the page -->
         <?php if (isset($_SESSION["badLogin"])): ?>
             <div class="alert alert-success">Incorrect username or password.</div>
-        <?php endif; ?>
+        <?php endif; unset($_SESSION["badLogin"];)?>
         <div class="row">
             <div id="loginBox" class="col-xs-4 col-xs-offset-4 space-4">
                 <form id="loginForm" action="php/authenticateUser.php" method="post">
