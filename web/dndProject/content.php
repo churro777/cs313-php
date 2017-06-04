@@ -79,7 +79,7 @@ echo "character = " . $_SESSION["character"];
 
 
             <?php if ($_SESSION["noCharacters"]): ?>
-            <section>
+            <section class="col-xs-10">
                 <div class="row">
                     <h2 class="col-xs-12 center">Hey you should make a character</h2>
                 </div>
