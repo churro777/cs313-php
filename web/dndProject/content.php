@@ -91,45 +91,41 @@ if (!isset($_SESSION["character"])) {
                 <!-- abiilty scores and modifiers -->
                 <div id="" class="row">
                     <?php require 'phpContent/getCharacterAbilityScores.php' ?>
-                    <!-- <div class="col-xs-2 center">
-                        <div class="abilityScoreBox">
-                            STR <br /> 19 (+4)
-                        </div>
-                    </div>
-                    <div class="col-xs-2 center">
-                        <div class="abilityScoreBox">
-                            DEX <br /> 19 (+4)
-                        </div>
-                    </div>
-                    <div class="col-xs-2 center">
-                        <div class="abilityScoreBox">
-                            CON <br /> 19 (+4)
-                        </div>
-                    </div>
-                    <div class="col-xs-2 center">
-                        <div class="abilityScoreBox">
-                            INT <br /> 19 (+4)
-                        </div>
-                    </div>
-                    <div class="col-xs-2 center">
-                        <div class="abilityScoreBox">
-                            WIS <br /> 19 (+4)
-                        </div>
-                    </div>
-                    <div class="col-xs-2 center">
-                        <div class="abilityScoreBox">
-                            CHA <br /> 19 (+4)
-                        </div>
-                    </div> -->
                 </div>
-                <!-- left section -->
-                    <!-- hp -->
-                    <!-- hit dice - total and how many left -->
-                    <!-- ac -->
-                    <!-- skills and modifiers for each -->
+                <hr />
+                <div class="row">
+                    <!-- left section -->
+                    <section class="col-xs-6">
+                        <div class="row">
+                            <!-- hp -->
+                            <div class="col-xs-4">
+                                HP
+                            </div>
+                            <!-- hit dice - total and how many left -->
+                            <div class="col-xs-4">
+                                Hit Dice
+                            </div>
+                            <!-- ac -->
+                            <div class="col-xs-4">
+                                AC
+                            </div>
+                        </div>
 
-                <!-- right section -->
-                <!-- features -->
+                        <!-- skills and modifiers for each -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- right section -->
+                    <section class="col-xs-6">
+                        <!-- features -->
+                    </section>
+
+                </div>
             </section>
             <?php endif; ?>
         </div>
