@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-xs-6 noPadRight">Current HP</div>
         <?php echo "<input id='currentHP' class='col-xs-5' type='number' name='currentHP' min='0'
-            value=" . $hpResult[1] . "  onblur='save('currentHP')'>" ?>
+            value='" . $hpResult[1] . "'>" ?>
 
     </div>
 </div>

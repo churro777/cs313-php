@@ -17,7 +17,7 @@
     <div class="row space-2">
         <div class="col-xs-5 center" style="font-size:20px;">AC</div>
         <?php echo "<input id='ac' class='col-xs-5' type='number' name='ac' min='0' value='"
-            . $acResult[0] . "' onblur='save('ac')'>" ?>
+            . $acResult[0] . "'>" ?>
 
     </div>
 </div>

@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-xs-6">Current</div>
         <?php echo "<input id='currentHitDice' class='col-xs-5' type='number' name='currentHitDice' min='0' value='"
-            . $hitDiceResult[1] ."' onblur='save('currentHitDice')'>" ?>
+            . $hitDiceResult[1] ."'>" ?>
 
     </div>
 </div>
