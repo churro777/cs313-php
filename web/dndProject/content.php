@@ -99,13 +99,13 @@ if (!isset($_SESSION["character"])) {
                         <div class="row">
                             <!-- hp -->
                             <div class="col-xs-4">
-                                HP
+                                HP <input type="text" name="" value="">
                             </div>
                             <!-- hit dice - total and how many left -->
                             <?php require 'phpContent/getcharacterHitDice.php' ?>
                             <!-- ac -->
                             <div class="col-xs-4">
-                                AC
+                                AC <input type="text" name="" value="">
                             </div>
                         </div>
 
