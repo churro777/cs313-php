@@ -115,17 +115,13 @@ if (!isset($_SESSION["character"])) {
                             <div class="col-xs-4">
                                 <div class="row">
                                     <div class="col-xs-6">AC</div>
+                                    <input class="col-xs-6" type="text" name="" value="">
                                 </div>
-                                <input class="col-xs-6" type="text" name="" value="">
                             </div>
                         </div>
                         <hr>
                         <!-- skills and modifiers for each -->
-                        <div class="row">
-                            <div class="col-xs-12">
-
-                            </div>
-                        </div>
+                        <?php require 'phpContent/getCharacterSkills.php'; ?>
                     </section>
 
 
