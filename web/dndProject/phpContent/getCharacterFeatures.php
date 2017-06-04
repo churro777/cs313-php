@@ -1,6 +1,6 @@
 <?php
 
-    $sql = 'SELECT featurename FROM raceFeature
+    $sql = 'SELECT featurename,featuredescription FROM raceFeature
             WHERE race_id = (SELECT race_id FROM character
                              WHERE charactername = :c
                                  AND player_id = (SELECT id FROM player WHERE username = :un));';
@@ -18,3 +18,19 @@
 
     var_dump($featureResult);
 ?>
+<?php if (!$_SESSION["race"] == "Human"): ?>
+    <div class="row">
+        <h3 class="col-xs-12">Race Features</h3>
+    </div>
+    <hr>
+<?php endif; ?>
+
+<?php foreach ($featureResult as $value): ?>
+    <div class="row">
+        <div class="col-xs-12">$value[0]</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">$value[1]</div>
+    </div>
+    <hr>
+<?php endforeach; ?>
