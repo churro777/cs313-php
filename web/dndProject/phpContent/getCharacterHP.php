@@ -1,5 +1,5 @@
 <?php
-    $sql = 'SELECT 
+    $sql = 'SELECT maxHP, currentHP FROM character
             WHERE ch.player_id = (SELECT id FROM player WHERE username = :un)
                 AND ch.characterName = :c;';
     $statement = $db->prepare($sql);
@@ -11,6 +11,7 @@
         echo "Problem getting characters. Details: $ex";
     }
     $hitDiceResult = $statement->fetch();
+    var_dump($hitDiceResult);
 ?>
 
 <div class="col-xs-4 leftBorder">
