@@ -95,16 +95,14 @@ if (!isset($_SESSION["character"])) {
                 <hr />
                 <div class="row">
                     <!-- left section -->
-                    <section class="col-xs-6">
+                    <section id="leftSide" class="col-xs-6">
                         <div class="row">
                             <!-- hp -->
                             <div class="col-xs-4">
                                 HP
                             </div>
                             <!-- hit dice - total and how many left -->
-                            <div class="col-xs-4">
-                                Hit Dice
-                            </div>
+                            <?php require 'phpContent/getcharacterHitDice.php' ?>
                             <!-- ac -->
                             <div class="col-xs-4">
                                 AC
@@ -114,7 +112,7 @@ if (!isset($_SESSION["character"])) {
                         <!-- skills and modifiers for each -->
                         <div class="row">
                             <div class="col-xs-12">
-                                
+
                             </div>
                         </div>
                     </section>

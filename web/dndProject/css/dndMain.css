@@ -90,3 +90,7 @@ hr {
 .checkbox label{
     color:white;
 }
+
+#leftSide {
+    border-right: solid 1px;
+}
