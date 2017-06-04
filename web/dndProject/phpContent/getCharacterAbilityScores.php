@@ -17,8 +17,8 @@
         echo "Problem getting characters. Details: $ex";
     }
     echo "executed successfully <br />";
-    $scoreResult = $statement->fetch();
-    echo $scoreResult . "<br />";
+    $scoreResult = $statement->fetchAll();
+    echo "scoreResult = " . $scoreResult . "<br />";
 ?>
 
 
