@@ -22,6 +22,6 @@
     </div>
     <div class="row">
         <div class="col-xs-6">Current</div>
-        <input id="currentHitDice" class="col-xs-5" type="number" name="currentHitDice" min="0" onblur="save(currentHitDice)">
+        <input id="currentHitDice" class="col-xs-5" type="number" name="currentHitDice" min="0" onblur="save('currentHitDice')">
     </div>
 </div>

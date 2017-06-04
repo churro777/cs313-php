@@ -13,6 +13,7 @@ function character(name, currentHP, maxHP, currentHitDice, ac) {
 
 function save(toBeSaved) {
     console.log("inside toBeSaved");
+    console.log("saving " + toBeSaved);
 }
 
 
@@ -28,7 +29,7 @@ function saveCharacter(){
     console.log("currentHitDice" + currentHitDice);
     console.log("maxHp" + maxHp);
     console.log("currentHP" + currentHP);
-    console.log("AC" + AC);
+    console.log("ac" + ac);
 
     var newguy = new character(character, character, currentHitDice, maxHp, currentHP, ac);
 
