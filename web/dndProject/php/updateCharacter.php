@@ -2,11 +2,6 @@
 
     require 'connectToDb.php';
 
-    if (isset($db)){
-        echo "db set <br />";
-    }
-
-
     var_dump($_GET);
     echo "before all teh sql stuff <br />";
 

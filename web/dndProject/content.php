@@ -96,16 +96,7 @@ if (!isset($_SESSION["character"])) {
                     <section id="leftSide" class="col-xs-6">
                         <div class="row">
                             <!-- hp -->
-                            <div class="col-xs-4 leftBorder">
-                                <div class="row">
-                                    <div class="col-xs-6 noPadRight">Max HP</div>
-                                    <input id="maxHP" class="col-xs-5" type="number" name="maxHP" min="0" onblur="save('maxHP')">
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-6 noPadRight">Current HP</div>
-                                    <input id="currentHP" class="col-xs-5" type="number" name="currentHP" min="0" onblur="save('currentHP')">
-                                </div>
-                            </div>
+                            <?php require 'phpContent/getCharacterHP.php' ?>
                             <!-- hit dice - total and how many left -->
                             <?php require 'phpContent/getCharacterHitDice.php' ?>
                             <!-- ac -->
