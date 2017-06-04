@@ -71,6 +71,13 @@ echo "character = " . $_SESSION["character"];
                 <!-- generate the characters the user has -->
                 <?php require 'phpContent/getCharacters.php' ?>
             </section>
+            <?php if (false): ?>
+                <?php echo "this is cuz its true" ?>
+            <?php else: ?>
+                <?php echo "this is cuz its false" ?>
+            <?php endif; ?>
+
+
             <?php if ($_SESSION["noCharacters"]): ?>
             <section>
                 <div class="row">
