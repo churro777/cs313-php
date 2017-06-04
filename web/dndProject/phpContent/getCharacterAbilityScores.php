@@ -1,17 +1,20 @@
 <?php
+    echo "inside getCharacterAbilityScores <br />";
     $sql = 'SELECT type, score FROM abilityScores
             WHERE charactername = :c';
     $statement = $db->prepare($sql);
     $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
     $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_STR);
 
+    echo "prepared and bound <br />";
     try {
         $statement->execute();
     } catch (PDOException $ex) {
         echo "Problem getting characters. Details: $ex";
     }
-
+    echo "executed successfully <br />";
     $scoreResult = $statement->fetch();
+    echo $scoreResult . "<br />";
 ?>
 
 
