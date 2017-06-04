@@ -18,18 +18,27 @@
 <?php foreach ($skillResult as $value): ?>
 <div class="row">
     <?php
-        // $sql = 'SELECT modifier FROM abilityScoreModifier
-        //         WHERE score = :x';
-        // $statement = $db->prepare($sql);
-        //
-        // $statement->bindParam(':x', $value[1], PDO::PARAM_INT);
-        //
-        // try {
-        //     $statement->execute();
-        // } catch (PDOException $ex) {
-        //     echo "Problem getting ability score modifier. Details: $ex";
-        // }
-        // $modResult = $statement->fetch();
+        echo "inside php <br />";
+        $sql = 'SELECT * FROM character ch
+                    INNER JOIN abilityScores a ON ch.id = a.character_id
+                    INNER JOIN abilityScoreModifier am ON a.score = am.score
+                WHERE ch.charactername = :c
+                    AND player_id = (SELECT id FROM player WHERE username = :un)
+                    AND a.type = :t;';
+        $statement = $db->prepare($sql);
+        echo "preped <br />";
+        $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_INT);
+        $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_INT);
+        $statement->bindParam(':t', $value["abilityscore"], PDO::PARAM_INT);
+        echo "bound <br />";
+        try {
+            $statement->execute();
+        } catch (PDOException $ex) {
+            echo "Problem getting ability score modifier. Details: $ex";
+        }
+        echo "success!! <br />";
+        $modResult = $statement->fetch();
+        var_dump($modResult);
     ?>
     <div class="col-xs-8"><?php echo $value["skill"]; ?></div>
 </div>
