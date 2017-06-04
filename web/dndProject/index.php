@@ -2,7 +2,6 @@
     unset($_SESSION["noCharacters"]);
     unset($_SESSION["character"]);
     unset($_SESSION["username"]);
-    var_dump($_SESSION)
 ?>
 <!DOCTYPE html>
 <html>

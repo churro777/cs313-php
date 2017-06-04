@@ -1,7 +1,5 @@
 <?php session_start(); require 'php/connectToDb.php';
 
-var_dump($_SESSION);
-
 if (!isset($_SESSION["username"])) {
     header("Location: index.php");
 }
