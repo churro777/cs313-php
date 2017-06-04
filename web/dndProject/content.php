@@ -88,7 +88,8 @@ if (!isset($_SESSION["character"])) {
                 <hr>
                 <!-- abiilty scores and modifiers -->
                 <div id="" class="row">
-                    <div class="col-xs-2 center">
+                    <?php require 'phpContent/getCharacterAbilityScores.php' ?>
+                    <!-- <div class="col-xs-2 center">
                         <div class="abilityScoreBox">
                             STR <br /> 19 (+4)
                         </div>
@@ -117,7 +118,7 @@ if (!isset($_SESSION["character"])) {
                         <div class="abilityScoreBox">
                             CHA <br /> 19 (+4)
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- left section -->
                     <!-- hp -->
