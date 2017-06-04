@@ -3,16 +3,16 @@
 
 
 
-function character(name, currentHP, maxHP, currentHitDice, AC) {
-    this.name = name;
-    this.currentHP = currentHP;
-    this.maxHP = maxHP;
-    this.currentHitDice = currentHitDice;
-    this.AC = AC;
-}
+// function character(name, currentHP, maxHP, currentHitDice, AC) {
+//     this.name = name;
+//     this.currentHP = currentHP;
+//     this.maxHP = maxHP;
+//     this.currentHitDice = currentHitDice;
+//     this.AC = AC;
+// }
 
-function save(toBeSaved){
-
+function save(toBeSaved) {
+    console.log("inside toBeSaved");
 }
 
 
@@ -36,6 +36,6 @@ function saveCharacter(){
     // localStorage.characters.push(new character());
 }
 
-funciton isCharacter() {
+function isCharacter() {
     console.log("inside isCharacter");
 }
