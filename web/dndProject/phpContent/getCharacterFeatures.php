@@ -38,7 +38,7 @@
 
 <?php
 
-    $sql = 'SELECT featurename FROM classFeature
+    $sql = 'SELECT featurename, featureText FROM classFeature
             WHERE class_id = (SELECT class_id FROM character
                               WHERE charactername = :c
                                   AND player_id = (SELECT id FROM player WHERE username = :un))
@@ -56,8 +56,6 @@
     }
 
     $featureResult = $statement->fetchAll();
-
-    var_dump($featureResult);
 ?>
 
 <div class="row">
