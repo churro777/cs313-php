@@ -1,6 +1,6 @@
 <?php session_start(); require 'php/connectToDb.php';
 
-//var_dump($_SESSION);
+var_dump($_SESSION);
 
 if (!isset($_SESSION["username"])) {
     header("Location: index.php");
@@ -72,7 +72,7 @@ if (!isset($_SESSION["character"])) {
             <!-- if the player has no characters saved then tell them to make a character -->
             <?php if ($_SESSION["noCharacters"]): ?>
             <section class="col-xs-10">
-                <div class="row">
+                <div class="row" style="margin-top:20%">
                     <h2 class="col-xs-12 center">Hey <?php echo $_SESSION["username"] ?>, you should make a character.
                         <br />It's easy. Just click on the New Character box on the left.</h2>
                 </div>
