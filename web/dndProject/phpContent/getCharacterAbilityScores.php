@@ -19,6 +19,9 @@
     echo "executed successfully <br />";
     $scoreResult = $statement->fetchAll();
     echo "scoreResult = " . $scoreResult . "<br />";
+    echo $scoreResult[0] . "<br />";
+    echo $scoreResult[1] . "<br />";
+    echo $scoreResult[2] . "<br />";
 ?>
 
 
