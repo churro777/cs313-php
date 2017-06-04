@@ -25,6 +25,14 @@ function save(toBeSaved) {
 
 
 function saveCharacter(){
+
+    if (localStorage.characters == NULL) {
+        console.log("localStorage.characters is null");
+        localStorage.characters = [];
+    }
+
+
+
     console.log("inside saveCharacter");
     var character = document.getElementById('characterName').textContent;
     var currentHitDice = document.getElementById('currentHitDice').value;
@@ -51,10 +59,10 @@ function saveCharacter(){
     //     console.log("localStorage is undefined");
     // }
 
-    if (addNewGuy) {
-        localStorage.characters.push(newguy);
-        console.log("added new guy");
-    }
+    // if (addNewGuy) {
+    //     localStorage.characters.push(newguy);
+    //     console.log("added new guy");
+    // }
 
 
     console.log("Lets see whats in localStorage");
