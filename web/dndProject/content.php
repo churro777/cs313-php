@@ -101,11 +101,11 @@ if (!isset($_SESSION["character"])) {
                             <div class="col-xs-4 leftBorder">
                                 <div class="row">
                                     <div class="col-xs-6 noPadRight">Max HP</div>
-                                    <input class="col-xs-5" type="number" name="maxHP" value="1">
+                                    <input class="col-xs-5" type="number" name="maxHP" min="0">
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-6 noPadRight">Current HP</div>
-                                    <input class="col-xs-5" type="number" name="currentHP" value="1">
+                                    <input class="col-xs-5" type="number" name="currentHP" min="0">
                                 </div>
                             </div>
 
@@ -114,8 +114,8 @@ if (!isset($_SESSION["character"])) {
                             <!-- ac -->
                             <div class="col-xs-4">
                                 <div class="row">
-                                    <div class="col-xs-6">AC</div>
-                                    <input class="col-xs-6" type="text" name="" value="">
+                                    <div class="col-xs-5 center" style="font-style:20px;">AC</div>
+                                    <input class="col-xs-5" type="text" name="ac" min="0">
                                 </div>
                             </div>
                         </div>

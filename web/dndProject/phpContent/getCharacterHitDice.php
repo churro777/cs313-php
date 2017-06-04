@@ -22,6 +22,6 @@
     </div>
     <div class="row">
         <div class="col-xs-6">Current</div>
-        <input class="col-xs-5" type="number" name="currentHitDice">
+        <input class="col-xs-5" type="number" name="currentHitDice" min="0">
     </div>
 </div>
