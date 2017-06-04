@@ -1,5 +1,5 @@
 <?php
-    $sql = 'SELECT maxHP, currentHP FROM character
+    $sql = 'SELECT ac FROM character
             WHERE player_id = (SELECT id FROM player WHERE username = :un)
                 AND characterName = :c;';
     $statement = $db->prepare($sql);
