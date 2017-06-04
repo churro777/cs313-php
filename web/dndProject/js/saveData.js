@@ -48,6 +48,7 @@ function saveCharacter(){
     }
     if (addNewGuy) {
         localStorage.characters.push(newguy);
+        console.log("added new guy");
     }
 
 }
