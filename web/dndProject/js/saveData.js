@@ -60,7 +60,7 @@ function saveCharacter(){
     }
 
     if (addNewGuy) {
-        localStorage.characters.[localStorage.characters.length] = newguy;
+        localStorage.characters[localStorage.characters.length] = newguy;
         console.log("added new guy");
     }
 
