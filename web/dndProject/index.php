@@ -1,7 +1,4 @@
-<?php session_start();
-$_SESSION["badLogin"] = "true";
-
-?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,6 +34,9 @@ $_SESSION["badLogin"] = "true";
         <div class="row">
             <p class="col-xs-12 center">Where you can create and store your characters.</p>
         </div>
+        <?php if (isset($_SESSION["badLogin"])): ?>
+            <div class="alert alert-success">Incorrect username or password.</div>
+        <?php endif; ?>
         <div class="row">
             <div id="loginBox" class="col-xs-4 col-xs-offset-4 space-4">
                 <form id="loginForm" action="php/authenticateUser.php" method="post">
