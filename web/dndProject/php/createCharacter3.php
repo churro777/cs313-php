@@ -7,92 +7,92 @@ echo "connected to db <br />";
 if (isset($_POST["Acrobatics"])) {
     echo $_POST["Acrobatics"] . "<br />";
 } else {
-    echo "Acrobatics";
+    echo "<br />notAcrobatics";
 }
 if (isset($_POST["Animal Handling"])) {
     echo $_POST["Animal Handling"] . "<br />";
 } else {
-    echo "Animal Handling";
+    echo "<br />notAnimal Handling";
 }
 if (isset($_POST["Arcana"])) {
     echo $_POST["Arcana"] . "<br />";
 } else {
-    echo "Arcana";
+    echo "<br />notArcana";
 }
 if (isset($_POST["Athletics"])) {
     echo $_POST["Athletics"] . "<br />";
 } else {
-    echo "Athletics";
+    echo "<br />notAthletics";
 }
 if (isset($_POST["Deception"])) {
     echo $_POST["Deception"] . "<br />";
 } else {
-    echo "Deception";
+    echo "<br />notDeception";
 }
 if (isset($_POST["History"])) {
     echo $_POST["History"] . "<br />";
 } else {
-    echo "History";
+    echo "<br />notHistory";
 }
 if (isset($_POST["Insight"])) {
     echo $_POST["Insight"] . "<br />";
 } else {
-    echo "Insight";
+    echo "<br />notInsight";
 }
 if (isset($_POST["Intimidation"])) {
     echo $_POST["Intimidation"] . "<br />";
 } else {
-    echo "Intimidation";
+    echo "<br />notIntimidation";
 }
 if (isset($_POST["Investigation"])) {
     echo $_POST["Investigation"] . "<br />";
 } else {
-    echo "Investigation";
+    echo "<br />notInvestigation";
 }
 if (isset($_POST["Medicine"])) {
     echo $_POST["Medicine"] . "<br />";
 } else {
-    echo "Medicine";
+    echo "<br />notMedicine";
 }
 if (isset($_POST["Nature"])) {
     echo $_POST["Nature"] . "<br />";
 } else {
-    echo "Nature";
+    echo "<br />notNature";
 }
 if (isset($_POST["Perception"])) {
     echo $_POST["Perception"] . "<br />";
 } else {
-    echo "Perception";
+    echo "<br />notPerception";
 }
 if (isset($_POST["Performance"])) {
     echo $_POST["Performance"] . "<br />";
 } else {
-    echo "Performance";
+    echo "<br />notPerformance";
 }
 if (isset($_POST["Persuasion"])) {
     echo $_POST["Persuasion"] . "<br />";
 } else {
-    echo "Persuasion";
+    echo "<br />notPersuasion";
 }
 if (isset($_POST["Religion"])) {
     echo $_POST["Religion"] . "<br />";
 } else {
-    echo "Religion";
+    echo "<br />notReligion";
 }
 if (isset($_POST["Sleight of Hand"])) {
     echo $_POST["Sleight of Hand"] . "<br />";
 } else {
-    echo "Sleight of Hand";
+    echo "<br />notSleight of Hand";
 }
 if (isset($_POST["Stealth"])) {
     echo $_POST["Stealth"] . "<br />";
 } else {
-    echo "Stealth";
+    echo "<br />notStealth";
 }
 if (isset($_POST["Survival"])) {
     echo $_POST["Survival"] . "<br />";
 } else {
-    echo "Survival";
+    echo "<br />notSurvival";
 }
 
 
