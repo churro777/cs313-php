@@ -19,7 +19,7 @@
 <div class="row">
     <?php
         echo "inside php <br />";
-        $sql = 'SELECT * FROM character ch
+        $sql = 'SELECT am.modifier FROM character ch
                     INNER JOIN abilityScores a ON ch.id = a.character_id
                     INNER JOIN abilityScoreModifier am ON a.score = am.score
                 WHERE ch.charactername = :c
@@ -41,6 +41,8 @@
         var_dump($modResult);
     ?>
     <div class="col-xs-8"><?php echo $value["skill"]; ?></div>
+    <div class="col-xs-2"><?php echo $value["abilityscore"]; ?></div>
+    <div class="col-xs-2"><?php echo $modResult[0]; ?></div>
 </div>
 
 <?php endforeach; ?>
