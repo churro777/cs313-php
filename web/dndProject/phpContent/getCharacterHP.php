@@ -22,12 +22,13 @@
     <div class="row">
         <div class="col-xs-6 noPadRight">Max HP</div>
         <?php echo "<input id='maxHP' class='col-xs-5' type='number' name='maxHP' min='0'
-            value=" . <php echo $hpResult[0]; ?> . " onblur='save('maxHP')'>"; ?>
+            value=" .  $hpResult[0] . " onblur='save('maxHP')'>"; ?>
 
     </div>
     <div class="row">
         <div class="col-xs-6 noPadRight">Current HP</div>
-        <input id="currentHP" class="col-xs-5" type="number" name="currentHP" min="0"
-            value="<php echo $hpResult[1]; ?>"  onblur="save('currentHP')">
+        <?php echo "<input id='currentHP' class='col-xs-5' type='number' name='currentHP' min='0'
+            value=" . $hpResult[1] . "  onblur='save('currentHP')'>" ?>
+        
     </div>
 </div>
