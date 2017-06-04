@@ -15,14 +15,15 @@
     }
     echo "success!!! <br />";
     $hpResult = $statement->fetch();
-    var_dump($hitDiceResult);
+    var_dump($hpResult);
 ?>
 
 <div class="col-xs-4 leftBorder">
     <div class="row">
         <div class="col-xs-6 noPadRight">Max HP</div>
-        <input id="maxHP" class="col-xs-5" type="number" name="maxHP" min="0"
-            value="<php echo $hpResult[0]; ?>" onblur="save('maxHP')">
+        <?php echo "<input id='maxHP' class='col-xs-5' type='number' name='maxHP' min='0'
+            value=" . <php echo $hpResult[0]; ?> . " onblur='save('maxHP')'>"; ?>
+
     </div>
     <div class="row">
         <div class="col-xs-6 noPadRight">Current HP</div>
