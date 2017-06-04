@@ -14,7 +14,7 @@
     $hitDiceResult = $statement->fetch();
 ?>
 
-<div id="hitDiceType" class="col-xs-4">
+<div id="hitDiceType" class="col-xs-4 leftBorder">
     <div class="row">
         <div class="col-xs-12">
             Total <?php echo $_SESSION["level"] . $hitDiceResult[0] ?>

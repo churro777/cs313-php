@@ -98,7 +98,7 @@ if (!isset($_SESSION["character"])) {
                     <section id="leftSide" class="col-xs-6">
                         <div class="row">
                             <!-- hp -->
-                            <div class="col-xs-4">
+                            <div class="col-xs-4 leftBorder">
                                 <div class="row">
                                     <div class="col-xs-7">Max HP</div>
                                     <input class="col-xs-5" type="number" name="maxHP" value="1">
