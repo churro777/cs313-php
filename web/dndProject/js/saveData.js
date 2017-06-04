@@ -3,12 +3,12 @@
 
 
 
-function character(name, currentHP, maxHP, currentHitDice, AC) {
+function character(name, currentHP, maxHP, currentHitDice, ac) {
     this.name = name;
     this.currentHP = currentHP;
     this.maxHP = maxHP;
     this.currentHitDice = currentHitDice;
-    this.AC = AC;
+    this.ac = ac;
 }
 
 function save(toBeSaved) {
