@@ -40,8 +40,16 @@ function saveCharacter(){
 
     var newguy = new Character(character, character, currentHitDice, maxHP, currentHP, ac);
 
-    // if (localStorage.characters.find())
-    // localStorage.characters.push(new character());
+    var addNewGuy = true;
+    for(i = 0; i< localStorage.characters.length; i++){
+        if (localStorage.characters[i].name == newguy.name){
+            addNewGuy = false;
+        }
+    }
+    if (addNewGuy) {
+        localStorage.characters.push(newguy);
+    }
+
 }
 
 function isCharacter() {
