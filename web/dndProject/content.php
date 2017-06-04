@@ -18,12 +18,12 @@ if (!isset($_SESSION["character"])) {
         echo "Problem getting characters. Details: $ex";
     }
     $_SESSION["character"] = $statement->fetch()[0];
+    // If player has no characters saved them set noCharacters to true
     if(!isset($_SESSION["character"])){
         $_SESSION["noCharacters"] = true;
-    }
-
-    if ($_SESSION["noCharacters"]) {
-        echo "just seeing if checking bool session variables works this way";
+    } else {
+        // otherwise unset noCharacters. Don't want it activating when it shouldnt be
+        unset($_SESSION["noCharacters"]);
     }
 
 }
@@ -71,6 +71,13 @@ echo "character = " . $_SESSION["character"];
                 <!-- generate the characters the user has -->
                 <?php require 'phpContent/getCharacters.php' ?>
             </section>
+            <?php if ($_SESSION["noCharacters"]): ?>
+            <section>
+                <div class="row">
+                    <h2 class="col-xs-12 center">Hey you should make a character</h2>
+                </div>
+            </section>
+            <?php else: ?>
             <!-- content -->
             <section id="content" class="col-xs-10">
                 <!-- name and race and class -->
@@ -126,6 +133,7 @@ echo "character = " . $_SESSION["character"];
                 <!-- right section -->
                 <!-- features -->
             </section>
+            <?php endif; ?>
         </div>
 
     </body>
