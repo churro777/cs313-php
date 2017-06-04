@@ -77,7 +77,9 @@ if (!isset($_SESSION["character"])) {
                         <br />It's easy. Just click on the New Character box on the left.</h2>
                 </div>
             </section>
+            <!-- get rid of this variable now that we dont need it -->
             <?php unset($_SESSION["noCharacters"]); ?>
+            <!-- the following will occur if the player has at least one character saved -->
             <?php else: ?>
             <!-- content -->
             <section id="content" class="col-xs-10">

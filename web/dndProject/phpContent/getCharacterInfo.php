@@ -19,8 +19,8 @@
 ?>
 
 <div class="row">
-    <div id="characterName" class="col-xs-8"><?php echo $scoreResult[0];?></div>
-    <div class="col-xs-4">
+    <div id="characterName" class="col-xs-7"><?php echo $scoreResult[0];?></div>
+    <div class="col-xs-5">
         <div id="levelClassRaceContainer" class="row">
             <div class="col-xs-4 center">Level <?php echo $scoreResult[1];?></div>
             <div class="col-xs-8 center"><?php echo $scoreResult[2];?> <?php echo $scoreResult[3];?></div>
