@@ -18,6 +18,11 @@ if (!isset($_SESSION["character"])) {
         echo "Problem getting characters. Details: $ex";
     }
     $_SESSION["character"] = $statement->fetch()[0];
+    if(isset($_SESSION["character"])){
+        echo "cool";
+    } else {
+        echo "still no character";
+    }
 }
 
 echo "character = " . $_SESSION["character"];
