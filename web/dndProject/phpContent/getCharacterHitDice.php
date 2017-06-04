@@ -1,5 +1,5 @@
 <?php
-    $sql = 'SELECT cl.hitdicetype FROM character ch
+    $sql = 'SELECT cl.hitdicetype, cl.currentHitDice FROM character ch
                 INNER JOIN class cl ON ch.class_id = cl.id
             WHERE ch.player_id = (SELECT id FROM player WHERE username = :un)
                 AND ch.characterName = :c;';
@@ -22,6 +22,8 @@
     </div>
     <div class="row">
         <div class="col-xs-6">Current</div>
-        <input id="currentHitDice" class="col-xs-5" type="number" name="currentHitDice" min="0" onblur="save('currentHitDice')">
+        <?php echo "<input id='currentHitDice' class='col-xs-5' type='number' name='currentHitDice' min='0' value='"
+            . $hitDiceResult[1] ."' onblur='save('currentHitDice')'>" ?>
+
     </div>
 </div>
