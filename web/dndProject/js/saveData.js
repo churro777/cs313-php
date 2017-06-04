@@ -1,8 +1,8 @@
 function setupFunctions(){
-    document.getElementById("ac").addEventListener("onblur", save(ac), false);
-    document.getElementById("currentHitDice").addEventListener("onblur", save(currentHitDice), false);
-    document.getElementById("maxHP").addEventListener("onblur", save(maxHP), false);
-    document.getElementById("currentHP").addEventListener("onblur", save(currentHP), false);
+    // document.getElementById("ac").addEventListener("onblur", save(ac), false);
+    // document.getElementById("currentHitDice").addEventListener("onblur", save(currentHitDice), false);
+    // document.getElementById("maxHP").addEventListener("onblur", save(maxHP), false);
+    // document.getElementById("currentHP").addEventListener("onblur", save(currentHP), false);
 }
 
 
