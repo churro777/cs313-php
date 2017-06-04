@@ -113,7 +113,10 @@ if (!isset($_SESSION["character"])) {
                             <?php require 'phpContent/getCharacterHitDice.php' ?>
                             <!-- ac -->
                             <div class="col-xs-4">
-                                AC <input type="text" name="" value="">
+                                <div class="row">
+                                    <div class="col-xs-6">AC</div>
+                                </div>
+                                <input class="col-xs-6" type="text" name="" value="">
                             </div>
                         </div>
                         <hr>
