@@ -1,7 +1,9 @@
 <?php
+    //require '../php/connectToDb.php';
     echo "inside getCharacterAbilityScores <br />";
     $sql = 'SELECT type, score FROM abilityScores
-            WHERE charactername = :c';
+            WHERE charactername = :c
+                AND (SELECT id FROM player WHERE username = :un)';
     $statement = $db->prepare($sql);
     $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
     $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_STR);
