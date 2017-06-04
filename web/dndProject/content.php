@@ -74,7 +74,7 @@ if (!isset($_SESSION["character"])) {
             <!-- if the player has no characters saved then tell them to make a character -->
             <?php if ($_SESSION["noCharacters"]): ?>
             <section class="col-xs-10">
-                <div class="row" style="margin-top:20%">
+                <div class="row" style="margin-top:20%;">
                     <h2 class="col-xs-12 center">Hey <?php echo $_SESSION["username"] ?>, you should make a character.
                         <br />It's easy. Just click on the New Character box on the left.</h2>
                 </div>
@@ -89,9 +89,7 @@ if (!isset($_SESSION["character"])) {
                 <?php require 'phpContent/getCharacterInfo.php' ?>
                 <hr>
                 <!-- abiilty scores and modifiers -->
-                <div id="" class="row">
-                    <?php require 'phpContent/getCharacterAbilityScores.php' ?>
-                </div>
+                <?php require 'phpContent/getCharacterAbilityScores.php' ?>
                 <hr />
                 <div class="row">
                     <!-- left section -->

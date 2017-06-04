@@ -18,7 +18,7 @@
 
 ?>
 
-<div class="row">
+<div class="row" style="height:17.5vh;">
     <?php foreach ($scoreResult as $value): ?>
         <?php
             $sql = 'SELECT modifier FROM abilityScoreModifier

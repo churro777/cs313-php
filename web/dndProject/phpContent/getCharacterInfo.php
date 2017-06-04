@@ -21,7 +21,7 @@
     $_SESSION["level"] = $scoreResult[1];
 ?>
 
-<div class="row">
+<div class="row" style="height: 22vh;">
     <div id="characterName" class="col-xs-7"><?php echo $scoreResult[0];?></div>
     <div class="col-xs-5">
         <div id="levelClassRaceContainer" class="row">
