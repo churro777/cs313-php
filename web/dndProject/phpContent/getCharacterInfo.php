@@ -25,12 +25,12 @@
     <div id="characterName" class="col-xs-6"><?php echo $scoreResult[0];?></div>
     <div class="col-xs-1">
         <div class="row">
-            <a href="#" class="col-xs-12">
+            <a href="#" class="col-xs-12" style="height:36px">
                 <img src="img/arrow-up.png" alt="">
             </a>
         </div>
         <div class="row">
-            <a href="#" class="col-xs-12">
+            <a href="#" class="col-xs-12" style="height:36px">
                 <img src="img/arrow-down.png" alt="">
             </a>
         </div>
