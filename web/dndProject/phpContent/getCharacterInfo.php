@@ -25,19 +25,21 @@
     <div id="characterName" class="col-xs-6"><?php echo $scoreResult[0];?></div>
     <div class="col-xs-1">
         <div class="row" style="padding-top: 6px; padding-bottom:6px;">
-            <a href="#" class="col-xs-12" style="height:30px">
+            <?php echo "<a href='../php/updateLevel.php?level'" . $scoreResult[1] . "&type=increase' class='col-xs-12'
+                        style='height:30px'>" ?>
                 <img src="img/arrow-up.png" alt="" style="height:100%;">
             </a>
         </div>
         <div class="row">
-            <a href="#" class="col-xs-12" style="height:30px">
+            <?php echo "<a href='../php/updateLevel.php?level'" . $scoreResult[1] . "&type=decrease' class='col-xs-12' 
+                        style='height:30px'>" ?>
                 <img src="img/arrow-down.png" alt="" style="height:100%;">
             </a>
         </div>
     </div>
     <div class="col-xs-5">
         <div id="levelClassRaceContainer" class="row">
-            <div class="col-xs-4 center noPadLeft">Level <?php echo $scoreResult[1];?></div>
+            <div class="col-xs-4 noPadLeft">Level <?php echo $scoreResult[1];?></div>
             <div class="col-xs-8 center"><?php echo $scoreResult[2];?> <?php echo $scoreResult[3];?></div>
         </div>
     </div>
