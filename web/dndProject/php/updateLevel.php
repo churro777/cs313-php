@@ -32,7 +32,7 @@
         echo "newlevel - " . $newLevel . "<br />";
     }
 
-    echo "lets now do stuff";
+    echo "lets now do stuff <br />";
     $sql = 'UPDATE character
             SET :col = :val
             WHERE player_id = (SELECT id FROM player WHERE username = :un)
