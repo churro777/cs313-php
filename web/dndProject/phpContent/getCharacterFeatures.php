@@ -15,10 +15,9 @@
     }
 
     $featureResult = $statement->fetchAll();
-    echo "race = " . $_SESSION["race"] . "<br />";
-    var_dump($_SESSION);
+
 ?>
-<?php if (!$_SESSION["race"] == "Human"): ?>
+<?php if (!empty($featureResult)): ?>
     <div class="row">
         <h3 class="col-xs-12">Race Features</h3>
     </div>
