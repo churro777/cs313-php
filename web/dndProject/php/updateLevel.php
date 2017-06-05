@@ -25,7 +25,7 @@
 
     if ($_GET["type"] == "decrease") {
         echo "lets decrease<br />";
-        $newLevel = $newLevel - 1;
+        $newLevel = $_GET["level"] - 1;
         if ($newLevel <= 0) {
             echo "bad <br />";
             header("Location: ../content.php");
@@ -54,6 +54,6 @@
     }
     echo "success <br />";
 
-    //header("Location: ../content.php");
+    header("Location: ../content.php");
 
 ?>
