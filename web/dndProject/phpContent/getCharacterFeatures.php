@@ -57,9 +57,6 @@
     }
 
     $featureResult = $statement->fetchAll();
-    echo $_SESSION["character"] . "<br />";
-    echo $_SESSION["username"] . "<br />";
-    var_dump($featureResult);
 ?>
 
 <div class="row">
