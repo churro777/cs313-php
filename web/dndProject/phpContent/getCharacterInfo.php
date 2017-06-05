@@ -31,7 +31,7 @@
             </a>
         </div>
         <div class="row">
-            <?php echo "<a href='php/updateLevel.php?level" . $scoreResult[1] . "&type=decrease' class='col-xs-12'
+            <?php echo "<a href='php/updateLevel.php?level=" . $scoreResult[1] . "&type=decrease' class='col-xs-12'
                         style='height:30px'>" ?>
                 <img src="img/arrow-down.png" alt="" style="height:100%;">
             </a>

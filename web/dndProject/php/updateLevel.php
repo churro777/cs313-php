@@ -28,7 +28,7 @@
         $newLevel = $_GET["level"] - 1;
         if ($newLevel <= 0) {
             echo "bad <br />";
-            //header("Location: ../content.php");
+            header("Location: ../content.php");
         }
         echo "newlevel - " . $newLevel . "<br />";
     }
