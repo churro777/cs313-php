@@ -26,18 +26,18 @@
     <div class="col-xs-1">
         <div class="row">
             <a href="#" class="col-xs-12" style="height:36px">
-                <img src="img/arrow-up.png" alt="">
+                <img src="img/arrow-up.png" alt="" style="height:100%;">
             </a>
         </div>
         <div class="row">
             <a href="#" class="col-xs-12" style="height:36px">
-                <img src="img/arrow-down.png" alt="">
+                <img src="img/arrow-down.png" alt="" style="height:100%;">
             </a>
         </div>
     </div>
     <div class="col-xs-5">
         <div id="levelClassRaceContainer" class="row">
-            <div class="col-xs-4 center">Level <?php echo $scoreResult[1];?></div>
+            <div class="col-xs-4 center noPadLeft">Level <?php echo $scoreResult[1];?></div>
             <div class="col-xs-8 center"><?php echo $scoreResult[2];?> <?php echo $scoreResult[3];?></div>
         </div>
     </div>
