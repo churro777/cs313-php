@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
     $sql = 'SELECT featurename,featuredescription FROM raceFeature
             WHERE race_id = (SELECT race_id FROM character
