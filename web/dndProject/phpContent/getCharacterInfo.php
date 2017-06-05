@@ -29,7 +29,6 @@
                 <img src="../img/arrow-up.png" alt="">
             </a>
         </div>
-    <div class="col-xs-1">
         <div class="row">
             <a href="#" class="col-xs-12">
                 <img src="../img/arrow-down.png" alt="">
