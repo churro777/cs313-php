@@ -45,7 +45,8 @@
                                   AND player_id = (SELECT id FROM player WHERE username = :un))
                 AND level <= (SELECT level FROM character
                               WHERE charactername = :c
-                                  AND player_id = (SELECT id FROM player WHERE username = :un));';
+                                  AND player_id = (SELECT id FROM player WHERE username = :un))
+            ORDER BY level;';
     $statement = $db->prepare($sql);
     $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_INT);
     $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_INT);
