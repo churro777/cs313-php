@@ -56,6 +56,7 @@
     }
 
     $featureResult = $statement->fetchAll();
+    var_dump($featureResult);
 ?>
 
 <div class="row">
