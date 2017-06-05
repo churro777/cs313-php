@@ -22,7 +22,20 @@
 ?>
 
 <div class="row" style="height: 73px;">
-    <div id="characterName" class="col-xs-7"><?php echo $scoreResult[0];?></div>
+    <div id="characterName" class="col-xs-6"><?php echo $scoreResult[0];?></div>
+    <div class="col-xs-1">
+        <div class="row">
+            <a href="#" class="col-xs-12">
+                <img src="../img/arrow-up.png" alt="">
+            </a>
+        </div>
+    <div class="col-xs-1">
+        <div class="row">
+            <a href="#" class="col-xs-12">
+                <img src="../img/arrow-down.png" alt="">
+            </a>
+        </div>
+    </div>
     <div class="col-xs-5">
         <div id="levelClassRaceContainer" class="row">
             <div class="col-xs-4 center">Level <?php echo $scoreResult[1];?></div>
