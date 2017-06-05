@@ -69,8 +69,8 @@ if (!isset($_SESSION["character"])) {
                 </div>
                 <hr>
                 <!-- generate the characters the user has -->
-                <div class="row" style="height: 100vh; overflow: scroll;">
-                    <div class="col-xs-12">
+                <div class="row" >
+                    <div class="col-xs-12" style="height: calc(100vh - 160px); overflow: scroll;">
                         <?php require 'phpContent/getCharacters.php' ?>
                     </div>
                 </div>
