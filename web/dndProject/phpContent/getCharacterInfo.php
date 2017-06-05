@@ -24,13 +24,13 @@
 <div class="row" style="height: 73px;">
     <div id="characterName" class="col-xs-6"><?php echo $scoreResult[0];?></div>
     <div class="col-xs-1">
-        <div class="row">
-            <a href="#" class="col-xs-12" style="height:36px">
+        <div class="row" style="padding-top: 6px; padding-bottom:6px;">
+            <a href="#" class="col-xs-12" style="height:30px">
                 <img src="img/arrow-up.png" alt="" style="height:100%;">
             </a>
         </div>
         <div class="row">
-            <a href="#" class="col-xs-12" style="height:36px">
+            <a href="#" class="col-xs-12" style="height:30px">
                 <img src="img/arrow-down.png" alt="" style="height:100%;">
             </a>
         </div>
