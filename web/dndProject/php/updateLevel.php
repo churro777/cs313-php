@@ -33,27 +33,29 @@
     }
 
     echo "lets now do stuff <br />";
-    $sql = 'UPDATE character
-            SET :col = :val
-            WHERE player_id = (SELECT id FROM player WHERE username = :un)
-                AND charactername = :c ;';
-
-    echo "before prepping <br />";
-    $statement = $db->prepare($sql);
-    echo "prepped <br />";
-    $statement->bindParam(':col', $_GET["column"], PDO::PARAM_STR);
-    $statement->bindParam(':val', $_GET["value"], PDO::PARAM_STR);
-    $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
-    $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_STR);
-    echo "bound <br />";
-    var_dump($statement);
-    try {
-        $statement->execute();
-    } catch (PDOException $ex) {
-        echo "Problem updating characters. Details: $ex";
-    }
-    echo "success <br />";
+    // $sql = 'UPDATE character
+    //         SET :col = :val
+    //         WHERE player_id = (SELECT id FROM player WHERE username = :un)
+    //             AND charactername = :c ;';
+    //
+    // echo "before prepping <br />";
+    // $statement = $db->prepare($sql);
+    // echo "prepped <br />";
+    // $statement->bindParam(':col', $_GET["column"], PDO::PARAM_STR);
+    // $statement->bindParam(':val', $_GET["value"], PDO::PARAM_STR);
+    // $statement->bindParam(':un', $_SESSION["username"], PDO::PARAM_STR);
+    // $statement->bindParam(':c', $_SESSION["character"], PDO::PARAM_STR);
+    // echo "bound <br />";
+    // var_dump($statement);
+    // try {
+    //     $statement->execute();
+    // } catch (PDOException $ex) {
+    //     echo "Problem updating characters. Details: $ex";
+    // }
+    // echo "success <br />";
 
     //header("Location: ../content.php");
 
 ?>
+
+<h2>you're going to update the character's level</h2>
