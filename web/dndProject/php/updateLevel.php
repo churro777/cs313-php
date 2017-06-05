@@ -26,7 +26,7 @@
     if ($_GET["type"] == "decrease") {
         echo "lets decrease<br />";
         $newLevel = $newLevel - 1;
-        if ($newLevel =< 0) {
+        if ($newLevel <= 0) {
             echo "bad <br />";
         }
         echo "newlevel - " . $newLevel . "<br />";
