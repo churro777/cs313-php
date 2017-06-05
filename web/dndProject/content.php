@@ -69,7 +69,11 @@ if (!isset($_SESSION["character"])) {
                 </div>
                 <hr>
                 <!-- generate the characters the user has -->
-                <?php require 'phpContent/getCharacters.php' ?>
+                <div class="row" style="height: 100vh; overflow: scroll;">
+                    <div class="col-xs-12">
+                        <?php require 'phpContent/getCharacters.php' ?>
+                    </div>
+                </div>
             </section>
             <!-- if the player has no characters saved then tell them to make a character -->
             <?php if ($_SESSION["noCharacters"]): ?>
