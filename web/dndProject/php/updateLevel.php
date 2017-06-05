@@ -28,6 +28,7 @@
         $newLevel = $newLevel - 1;
         if ($newLevel <= 0) {
             echo "bad <br />";
+            header("Location: ../content.php");
         }
         echo "newlevel - " . $newLevel . "<br />";
     }
@@ -57,5 +58,3 @@
     //header("Location: ../content.php");
 
 ?>
-
-<h2>you're going to update the character's level</h2>
