@@ -54,6 +54,6 @@
     }
     echo "success <br />";
 
-    header("Location: ../content.php");
+    //header("Location: ../content.php");
 
 ?>
