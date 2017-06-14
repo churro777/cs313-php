@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MATH TIME!!!!1!!!!!</title>
+
+    <script type="text/javascript">
+        function mathService() {
+            var xhttp = new XMLHttpRequest();
+            var obj;
+
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    obj = JSON.parse(this.responseText);
+                    var output = "The answer to " + obj.input1 + " " + obj.operator + " "
+                                + obj.input2 + " = " + obj.answer;
+                    document.getElementById("output").innerHTML = output;
+                }
+            };
+
+            var operator = document.getElementsByName("operator")[0].value;
+            var input1 = document.getElementsByName("input1")[0].value;
+            var input2 = document.getElementsByName("input2")[0].value;
+            var queryString = "?operator=" + operator + "&input1=" + input1 + "&input2=" + input2;
+            xhttp.open("GET", "math_service" +queryString , true);
+            xhttp.send();
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Let's do math</h1>
+    <form class="" action="/math" method="get">
+        <select name="operator">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="divide">/</option>
+                <option value="multiply">*</option>
+            </select>
+        <input type="number" name="input1" value="0">
+        <input type="number" name="input2" value="0">
+        <button type="submit">Calculate</button>
+        <br>
+        <button type="button" name="json" onclick="mathService()">JSON</button>
+    </form>
+    <div id="output">
+
+    </div>
+
+</body>
+
+</html>
